@@ -1,0 +1,44 @@
+name: fmd-quality
+version: 1.0.0
+description: "Garantia de Qualidade — revisões técnica, SEO, acessibilidade, performance e institucional. Valida critérios de aceitação antes da publicação."
+author: FMD Soluções Inteligentes
+license: MIT
+slashPrefix: fmd-quality
+
+aiox:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - qa
+    - devops
+  tasks:
+    - technical-review.md
+    - seo-review.md
+    - accessibility-review.md
+    - performance-review.md
+    - institutional-review.md
+  workflows: []
+  checklists: []
+  templates: []
+  tools: []
+  scripts: []
+
+config:
+  extends: extend
+  coding-standards: config/coding-standards.md
+  tech-stack: config/tech-stack.md
+  source-tree: config/source-tree.md
+
+dependencies:
+  node: []
+  python: []
+  squads:
+    - fmd-dev
+
+tags:
+  - fmd
+  - quality
+  - qa
+  - review

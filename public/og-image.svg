@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#050816"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#g)" opacity="0.15"/>
+  <rect x="100" y="100" width="1000" height="430" rx="24" stroke="#0a5cff" stroke-width="1" stroke-opacity="0.15" fill="none"/>
+  <rect x="120" y="120" width="960" height="390" rx="16" stroke="#0a5cff" stroke-width="0.5" stroke-opacity="0.1" fill="none"/>
+  <text x="600" y="270" text-anchor="middle" fill="#f5f7fa" font-size="48" font-weight="600" font-family="sans-serif" letter-spacing="-2">FMD Soluções Inteligentes</text>
+  <text x="600" y="330" text-anchor="middle" fill="#8b92a5" font-size="22" font-family="sans-serif">Engenharia de Software, IA e Automação</text>
+  <text x="600" y="390" text-anchor="middle" fill="#0a5cff" font-size="16" font-family="monospace">fmdsoluccoesinteligentes.com.br</text>
+  <rect x="530" y="140" width="140" height="4" rx="2" fill="#0a5cff"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#0a5cff"/>
+      <stop offset="100%" stop-color="#00c2ff"/>
+    </linearGradient>
+  </defs>
+</svg>

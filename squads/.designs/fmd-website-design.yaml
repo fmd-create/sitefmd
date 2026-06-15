@@ -1,0 +1,79 @@
+squad:
+  name: fmd-website
+  description: "Website institucional FMD Soluções Inteligentes"
+  domain: website-institucional
+
+analysis:
+  entities: [FMD, Nyra, InMora, Opportunity Engine, Intelligent Squads]
+  workflows:
+    - discovery
+    - design
+    - desenvolvimento-frontend
+    - qualidade
+    - devops
+  integrations: []
+  stakeholders: [Clientes, Investidores, Parceiros, Microsoft for Startups, Talentos]
+
+recommendations:
+  squads:
+    - id: fmd-discovery
+      description: "Descoberta, Arquitetura de Conteúdo e Storytelling"
+      agents: [analyst, pm, architect]
+      tasks:
+        - collect-brand-assets
+        - define-info-architecture
+        - structure-pages
+        - write-content
+        - define-sitemap
+        - define-seo-strategy
+      confidence: 0.95
+
+    - id: fmd-design
+      description: "Direção Visual, Wireframes e Identidade Gráfica"
+      agents: [ux-design-expert, dev]
+      tasks:
+        - create-wireframes
+        - define-visual-direction
+        - create-graphic-identity
+        - generate-assets
+        - create-style-guide
+      confidence: 0.93
+
+    - id: fmd-dev
+      description: "Desenvolvimento Front-end — site bilíngue (PT/EN), responsivo (desktop, tablet e mobile), performático, acessível, SEO otimizado"
+      agents: [dev, architect]
+      tasks:
+        - setup-project
+        - implement-pages
+        - implement-responsive
+        - implement-seo
+        - implement-accessibility
+        - implement-performance
+      confidence: 0.96
+
+    - id: fmd-quality
+      description: "Garantia de Qualidade — revisões técnica, SEO, acessibilidade, performance e institucional"
+      agents: [qa, devops]
+      tasks:
+        - technical-review
+        - seo-review
+        - accessibility-review
+        - performance-review
+        - institutional-review
+      confidence: 0.94
+
+    - id: fmd-devops
+      description: "Infraestrutura e Publicação — CI/CD, deploy, domínio, SSL, analytics"
+      agents: [devops]
+      tasks:
+        - setup-ci-cd
+        - configure-domain
+        - setup-analytics
+        - deploy-site
+      confidence: 0.92
+
+metadata:
+  created_at: "2026-06-15T00:00:00Z"
+  source_docs: ["brief-flavia-md"]
+  user_adjustments: 2
+  overall_confidence: 0.93

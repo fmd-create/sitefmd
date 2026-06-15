@@ -1,0 +1,16 @@
+{
+  "name": "FMD Soluções Inteligentes",
+  "short_name": "FMD",
+  "description": "Engenharia de Software, Inteligência Artificial, Dados e Automação",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

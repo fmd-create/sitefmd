@@ -1,0 +1,45 @@
+name: fmd-discovery
+version: 1.0.0
+description: "Descoberta, Arquitetura de Conteúdo e Storytelling — coleta de assets, arquitetura da informação, estrutura de páginas e narrativa do site"
+author: FMD Soluções Inteligentes
+license: MIT
+slashPrefix: fmd-discovery
+
+aiox:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - analyst
+    - pm
+    - architect
+  tasks:
+    - collect-brand-assets.md
+    - define-info-architecture.md
+    - structure-pages.md
+    - write-content.md
+    - define-sitemap.md
+    - define-seo-strategy.md
+  workflows: []
+  checklists: []
+  templates: []
+  tools: []
+  scripts: []
+
+config:
+  extends: extend
+  coding-standards: config/coding-standards.md
+  tech-stack: config/tech-stack.md
+  source-tree: config/source-tree.md
+
+dependencies:
+  node: []
+  python: []
+  squads: []
+
+tags:
+  - fmd
+  - discovery
+  - content
+  - ia
