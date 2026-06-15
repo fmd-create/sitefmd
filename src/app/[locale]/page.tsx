@@ -174,13 +174,13 @@ export default function HomePage() {
                   style={{ animation: "slide-up 0.6s ease-out 0.4s forwards", opacity: 0 }}
                 >
                   <div>
-                    <span className="font-primary text-2xl font-bold gradient-text">4+</span>
-                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_products_label}</p>
+                    <span className="font-primary text-2xl font-bold gradient-text">4</span>
+                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_platforms_label}</p>
                   </div>
                   <div className="w-px h-10 bg-[#2a2f3b]" />
                   <div>
-                    <span className="font-primary text-2xl font-bold gradient-text">6</span>
-                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_areas_label}</p>
+                    <span className="font-primary text-2xl font-bold gradient-text">+20</span>
+                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_techs_label}</p>
                   </div>
                   <div className="w-px h-10 bg-[#2a2f3b]" />
                   <div>

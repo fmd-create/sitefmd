@@ -16,8 +16,6 @@ export default function AboutPage() {
   const flowSteps = (ma?.flow_steps as string[]) || [];
   const diffsItems = (ma?.diffs_items as { title: string; desc: string }[]) || [];
 
-  const yearsInMarket = new Date().getFullYear() - 2020;
-
   return (
     <>
       <Header />
@@ -42,11 +40,10 @@ export default function AboutPage() {
             </div>
 
             {/* Stats */}
-            <div className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-[#2a2f3b]/30 rounded-xl overflow-hidden border border-[#2a2f3b]/30">
+            <div className="mt-16 md:mt-20 grid grid-cols-3 gap-px bg-[#2a2f3b]/30 rounded-xl overflow-hidden border border-[#2a2f3b]/30">
               {[
-                { value: `${yearsInMarket}+`, label: ma?.stat_years as string },
-                { value: "4", label: ma?.stat_products as string },
-                { value: "6", label: ma?.stat_areas as string },
+                { value: "4", label: ma?.stat_platforms as string },
+                { value: "+20", label: ma?.stat_techs as string },
                 { value: "100%", label: ma?.stat_engineering as string },
               ].map((stat, i) => (
                 <div key={i} className="bg-[#0a0f1e]/60 p-8">
