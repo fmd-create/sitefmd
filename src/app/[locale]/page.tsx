@@ -10,6 +10,12 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "@/components/effects/particles";
 import { ConnectingLines } from "@/components/effects/connecting-lines";
+import dynamic from "next/dynamic";
+
+const NeuralParticles = dynamic(
+  () => import("@/components/effects/neural-particles").then((m) => m.NeuralParticles),
+  { ssr: false, loading: () => <div className="aspect-[6/5] w-full bg-[#050816] rounded-xl" /> }
+);
 
 const products = [
   {
@@ -266,19 +272,16 @@ export default function HomePage() {
                     <div>
                       <p className="text-sm font-medium text-[#f5f7fa]">{(messages.home as Record<string, unknown>).about.forge_label}</p>
                       <p className="text-xs text-[#5a6275]">{(messages.home as Record<string, unknown>).about.forge_subtitle}</p>
+                      <p className="mt-3 text-xs leading-relaxed text-[#5a6275]/70 max-w-sm">
+                        {(messages.home as Record<string, unknown>).about.forge_description}
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="lg:col-span-2 relative">
-                  <div className="relative rounded-xl border border-[#2a2f3b] overflow-hidden bg-[#0a0f1e]/50">
-                    <Image
-                      src="/images/illustrations/forge-architecture.svg"
-                      alt="Forge Architecture"
-                      width={600}
-                      height={600}
-                      className="w-full h-auto"
-                    />
+                  <div className="relative rounded-xl border border-[#2a2f3b] overflow-hidden bg-[#050816] max-h-[400px]">
+                    <NeuralParticles />
                   </div>
                 </div>
               </div>
@@ -644,3 +647,5 @@ export default function HomePage() {
     </>
   );
 }
+
+

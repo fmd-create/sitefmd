@@ -2,13 +2,14 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { useTranslations, useLocale } from "@/i18n/next-intl-provider";
-import { Mail, Linkedin, Github, Send, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
+import { useMessages, useLocale } from "@/i18n/next-intl-provider";
+import { Mail, Linkedin, Github, Send, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
 import { useState, FormEvent } from "react";
 
 export default function ContactPage() {
-  const { t } = useTranslations("contact");
+  const messages = useMessages();
   const locale = useLocale();
+  const mc = messages?.contact as Record<string, unknown> | undefined;
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [statusMsg, setStatusMsg] = useState("");
 
@@ -39,11 +40,11 @@ export default function ContactPage() {
         form.reset();
       } else {
         setStatus("error");
-        setStatusMsg(json.error || "Erro ao enviar mensagem.");
+        setStatusMsg(json.error || (locale === "pt" ? "Erro ao enviar mensagem." : "Error sending message."));
       }
     } catch {
       setStatus("error");
-      setStatusMsg("Erro de conexão. Tente novamente.");
+      setStatusMsg(locale === "pt" ? "Erro de conexão. Tente novamente." : "Connection error. Please try again.");
     }
   }
 
@@ -59,23 +60,23 @@ export default function ContactPage() {
               FMD Soluções Inteligentes
             </span>
             <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#f5f7fa]">
-              {t("title")}
+              {mc?.title as string}
             </h1>
             <p className="mt-4 text-[#8b92a5] max-w-xl">
-              {t("subtitle")}
+              {mc?.subtitle as string}
             </p>
           </div>
         </section>
 
         <div className="mx-auto max-w-7xl px-6 pb-28">
-          <div className="grid gap-10 md:grid-cols-5">
+          <div className="grid gap-10 lg:grid-cols-5">
             {/* Form */}
-            <div className="md:col-span-3 rounded-xl border border-[#2a2f3b] bg-[#0a0f1e]/50 p-8 md:p-10">
+            <div className="lg:col-span-3 rounded-xl border border-[#2a2f3b] bg-[#1a1f2b] p-8 md:p-10">
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="mb-2 block text-xs font-medium text-[#8b92a5] uppercase tracking-wider">
-                      {t("form_name")}
+                      {mc?.form_name as string}
                     </label>
                     <input
                       id="name"
@@ -83,12 +84,12 @@ export default function ContactPage() {
                       type="text"
                       required
                       className="w-full rounded-lg border border-[#2a2f3b] bg-[#050816] px-4 py-3 text-sm text-[#f5f7fa] placeholder-[#5a6275] outline-none transition-all duration-200 focus:border-[#0a5cff] focus:ring-1 focus:ring-[#0a5cff]/20"
-                      placeholder={t("form_name")}
+                      placeholder={(mc?.form_name as string) || "Nome"}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="mb-2 block text-xs font-medium text-[#8b92a5] uppercase tracking-wider">
-                      {t("form_email")}
+                      {locale === "pt" ? "E-mail" : mc?.form_email as string}
                     </label>
                     <input
                       id="email"
@@ -96,25 +97,25 @@ export default function ContactPage() {
                       type="email"
                       required
                       className="w-full rounded-lg border border-[#2a2f3b] bg-[#050816] px-4 py-3 text-sm text-[#f5f7fa] placeholder-[#5a6275] outline-none transition-all duration-200 focus:border-[#0a5cff] focus:ring-1 focus:ring-[#0a5cff]/20"
-                      placeholder={t("form_email")}
+                      placeholder={(mc?.form_email as string) || "Email"}
                     />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="company" className="mb-2 block text-xs font-medium text-[#8b92a5] uppercase tracking-wider">
-                    {t("form_company")}
+                    {mc?.form_company as string}
                   </label>
                   <input
                     id="company"
                     name="company"
                     type="text"
                     className="w-full rounded-lg border border-[#2a2f3b] bg-[#050816] px-4 py-3 text-sm text-[#f5f7fa] placeholder-[#5a6275] outline-none transition-all duration-200 focus:border-[#0a5cff] focus:ring-1 focus:ring-[#0a5cff]/20"
-                    placeholder={t("form_company")}
+                    placeholder={(mc?.form_company as string) || "Empresa"}
                   />
                 </div>
                 <div>
                   <label htmlFor="message" className="mb-2 block text-xs font-medium text-[#8b92a5] uppercase tracking-wider">
-                    {t("form_message")}
+                    {mc?.form_message as string}
                   </label>
                   <textarea
                     id="message"
@@ -122,7 +123,7 @@ export default function ContactPage() {
                     rows={5}
                     required
                     className="w-full resize-none rounded-lg border border-[#2a2f3b] bg-[#050816] px-4 py-3 text-sm text-[#f5f7fa] placeholder-[#5a6275] outline-none transition-all duration-200 focus:border-[#0a5cff] focus:ring-1 focus:ring-[#0a5cff]/20"
-                    placeholder={t("form_message")}
+                    placeholder={(mc?.form_message as string) || "Mensagem"}
                   />
                 </div>
 
@@ -145,19 +146,21 @@ export default function ContactPage() {
                   className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#0a5cff] px-8 py-3.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#0045cc] hover:shadow-glow active:scale-[0.97] mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send size={14} className={status === "loading" ? "animate-pulse" : ""} />
-                  {status === "loading" ? "Enviando..." : t("form_send")}
+                  {status === "loading"
+                    ? (locale === "pt" ? "Enviando..." : "Sending...")
+                    : (mc?.form_send as string)}
                 </button>
               </form>
             </div>
 
             {/* Contact Info */}
-            <div className="md:col-span-2 flex flex-col justify-center gap-8">
-              <div>
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-[#0a5cff]/10">
+            <div className="lg:col-span-2 flex flex-col justify-center gap-8">
+              <div className="group rounded-xl border border-[#2a2f3b] bg-[#1a1f2b] p-6 transition-all duration-300 hover:border-[#0a5cff]/30 hover:shadow-sm">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0a5cff]/10">
                   <Mail size={18} className="text-[#0a5cff]" />
                 </div>
                 <h3 className="font-primary text-sm font-semibold text-[#f5f7fa] mb-1">
-                  {t("email_label")}
+                  {mc?.email_label as string}
                 </h3>
                 <a
                   href="mailto:contato@fmdsoluccoesinteligentes.com.br"
@@ -166,8 +169,8 @@ export default function ContactPage() {
                   contato@fmdsoluccoesinteligentes.com.br
                 </a>
               </div>
-              <div>
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-[#0a5cff]/10">
+              <div className="group rounded-xl border border-[#2a2f3b] bg-[#1a1f2b] p-6 transition-all duration-300 hover:border-[#0a5cff]/30 hover:shadow-sm">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0a5cff]/10">
                   <Linkedin size={18} className="text-[#0a5cff]" />
                 </div>
                 <h3 className="font-primary text-sm font-semibold text-[#f5f7fa] mb-1">
@@ -183,20 +186,20 @@ export default function ContactPage() {
                   <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
                 </a>
               </div>
-              <div>
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-[#0a5cff]/10">
+              <div className="group rounded-xl border border-[#2a2f3b] bg-[#1a1f2b] p-6 transition-all duration-300 hover:border-[#0a5cff]/30 hover:shadow-sm">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#0a5cff]/10">
                   <Github size={18} className="text-[#0a5cff]" />
                 </div>
                 <h3 className="font-primary text-sm font-semibold text-[#f5f7fa] mb-1">
                   GitHub
                 </h3>
                 <a
-                  href="https://github.com/FMD-Intelligent-Solutions"
+                  href="https://github.com/fmd-create"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-1 text-sm text-[#8b92a5] transition-colors hover:text-[#0a5cff]"
                 >
-                  FMD Intelligent Solutions
+                  fmd-create
                   <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
                 </a>
               </div>
