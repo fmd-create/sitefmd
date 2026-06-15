@@ -3,7 +3,8 @@
 import { createContext, useContext, type ReactNode } from "react";
 import type { Locale } from "./routing";
 
-type Messages = Record<string, unknown>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Messages = Record<string, any>;
 
 const I18nContext = createContext<{
   locale: Locale;

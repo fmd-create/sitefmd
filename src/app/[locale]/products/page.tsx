@@ -34,7 +34,7 @@ const oeScreenshots = ["kpis.jpg", "ranking.jpg", "trends.jpg", "map.jpg"];
 export default function ProductsPage() {
   const messages = useMessages();
   const locale = useLocale();
-  const mp = messages?.products as Record<string, unknown> | undefined;
+  const mp = messages?.products as any;
 
   const productKeys = ["nyra", "inmora", "opportunity_engine", "intelligent_squads"];
 
@@ -60,7 +60,7 @@ export default function ProductsPage() {
 
         {/* ============ PRODUCT DETAIL SECTIONS ============ */}
         {productKeys.map((key, pi) => {
-          const prod = mp?.[key] as Record<string, unknown> | undefined;
+          const prod = mp?.[key] as any;
           const Icon = productIcons[key] || Zap;
           const color = productColors[key] || "#0a5cff";
           const isLeft = pi % 2 === 0;
