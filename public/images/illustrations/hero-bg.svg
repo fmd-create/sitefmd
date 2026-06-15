@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A5CFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00C2FF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A5CFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#00C2FF" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid background lines -->
+  <g opacity="0.15">
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="0" y1="450" x2="800" y2="450" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+  </g>
+
+  <!-- Geometric circles -->
+  <circle cx="150" cy="200" r="120" fill="url(#g1)"/>
+  <circle cx="650" cy="400" r="80" fill="url(#g2)"/>
+  <circle cx="400" cy="500" r="60" fill="url(#g1)"/>
+
+  <!-- Connecting lines (data flow) -->
+  <g stroke="#0A5CFF" stroke-width="1" opacity="0.2">
+    <path d="M150 200 Q 300 100 400 300"/>
+    <path d="M150 200 Q 300 350 650 400"/>
+    <path d="M400 300 L 650 400"/>
+    <path d="M400 300 Q 500 450 400 500"/>
+  </g>
+
+  <!-- Nodes -->
+  <g fill="#0A5CFF" opacity="0.3">
+    <circle cx="150" cy="200" r="4"/>
+    <circle cx="400" cy="300" r="4"/>
+    <circle cx="650" cy="400" r="4"/>
+    <circle cx="400" cy="500" r="4"/>
+  </g>
+
+  <!-- Rings -->
+  <circle cx="400" cy="300" r="180" stroke="#0A5CFF" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="400" cy="300" r="250" stroke="#00C2FF" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Particles -->
+  <g fill="#0A5CFF" opacity="0.4">
+    <circle cx="80" cy="100" r="2"/>
+    <circle cx="700" cy="100" r="1.5"/>
+    <circle cx="350" cy="150" r="2"/>
+    <circle cx="550" cy="250" r="1.5"/>
+    <circle cx="250" cy="400" r="2"/>
+    <circle cx="720" cy="500" r="1.5"/>
+    <circle cx="100" cy="500" r="2"/>
+    <circle cx="500" cy="550" r="1.5"/>
+  </g>
+</svg>

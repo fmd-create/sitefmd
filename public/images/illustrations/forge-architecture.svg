@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="meshG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A5CFF" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#050816" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#00C2FF" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grid base -->
+  <g opacity="0.08">
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="160" y1="0" x2="160" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="320" y1="0" x2="320" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="480" y1="0" x2="480" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+    <line x1="640" y1="0" x2="640" y2="600" stroke="#0A5CFF" stroke-width="0.5"/>
+  </g>
+
+  <!-- Central glow -->
+  <ellipse cx="400" cy="300" rx="300" ry="250" fill="url(#meshG)"/>
+
+  <!-- Geometric rings -->
+  <circle cx="400" cy="300" r="200" stroke="#0A5CFF" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="400" cy="300" r="140" stroke="#00C2FF" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="400" cy="300" r="80" stroke="#0A5CFF" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Lines radiating from center -->
+  <g stroke="#0A5CFF" stroke-width="0.5" opacity="0.12">
+    <line x1="400" y1="300" x2="100" y2="100"/>
+    <line x1="400" y1="300" x2="700" y2="100"/>
+    <line x1="400" y1="300" x2="100" y2="500"/>
+    <line x1="400" y1="300" x2="700" y2="500"/>
+    <line x1="400" y1="300" x2="400" y2="50"/>
+    <line x1="400" y1="300" x2="400" y2="550"/>
+    <line x1="400" y1="300" x2="50" y2="300"/>
+    <line x1="400" y1="300" x2="750" y2="300"/>
+  </g>
+
+  <!-- Nodes at intersections -->
+  <g fill="#0A5CFF" opacity="0.3">
+    <circle cx="400" cy="300" r="6"/>
+    <circle cx="200" cy="200" r="3"/>
+    <circle cx="600" cy="200" r="3"/>
+    <circle cx="200" cy="400" r="3"/>
+    <circle cx="600" cy="400" r="3"/>
+    <circle cx="400" cy="100" r="3"/>
+    <circle cx="400" cy="500" r="3"/>
+    <circle cx="100" cy="300" r="3"/>
+    <circle cx="700" cy="300" r="3"/>
+  </g>
+
+  <!-- Particle dots -->
+  <g fill="#0A5CFF" opacity="0.5">
+    <circle cx="120" cy="80" r="2"/>
+    <circle cx="680" cy="80" r="2"/>
+    <circle cx="80" cy="450" r="2"/>
+    <circle cx="720" cy="520" r="2"/>
+    <circle cx="300" cy="150" r="1.5"/>
+    <circle cx="500" cy="150" r="1.5"/>
+    <circle cx="300" cy="450" r="1.5"/>
+    <circle cx="500" cy="450" r="1.5"/>
+    <circle cx="180" cy="350" r="1"/>
+    <circle cx="620" cy="350" r="1"/>
+  </g>
+</svg>

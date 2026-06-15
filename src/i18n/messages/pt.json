@@ -1,0 +1,261 @@
+{
+  "nav": {
+    "products": "Produtos",
+    "solutions": "Soluções",
+    "about": "Sobre",
+    "blog": "Blog",
+    "contact": "Contato",
+    "talk": "Falar conosco"
+  },
+  "home": {
+    "hero": {
+      "badge": "FMD Soluções Inteligentes",
+      "headline_line1": "Engenharia que",
+      "headline_accent": "transforma dados",
+      "headline_line2": "em decisões",
+      "subtitle": "Projetamos sistemas inteligentes de automação comercial, inteligência econômica e engenharia de dados — do Brasil para o mundo.",
+      "cta_primary": "Iniciar projeto",
+      "cta_secondary": "Conhecer produtos",
+      "metric_products_label": "Produtos",
+      "metric_areas_label": "Áreas de atuação",
+      "metric_engineering_label": "Engenharia própria",
+      "in_production": "Em produção",
+      "screenshots": "9 screenshots reais",
+      "scroll": "Role para explorar"
+    },
+    "about": {
+      "badge": "Quem somos",
+      "headline": "Não construímos software para seguir tendências.",
+      "paragraph1": "Construímos soluções inteligentes capazes de transformar dados em decisões e processos em vantagem competitiva.",
+      "paragraph2": "Cada plataforma que projetamos segue a filosofia Forge: construção precisa, refinamento contínuo, engenharia como base e evolução como padrão.",
+      "forge_label": "Filosofia Forge",
+      "forge_subtitle": "Construção • Refinamento • Evolução • Precisão"
+    },
+    "products": {
+      "badge": "Ecossistema",
+      "headline": "Produtos que resolvem",
+      "subtitle": "Cada produto é uma plataforma independente, construída com a mesma engenharia de alto nível."
+    },
+    "methodology": {
+      "badge": "Metodologia",
+      "headline": "Dado → Inteligência → Decisão",
+      "subtitle": "Toda solução FMD segue um pipeline de engenharia que transforma dados brutos em automação inteligente.",
+      "steps": [
+        { "label": "Coleta", "desc": "APIs, bancos, arquivos" },
+        { "label": "Processamento", "desc": "ETL, pipelines, lake" },
+        { "label": "Inteligência", "desc": "ML, NLP, agentes" },
+        { "label": "Visualização", "desc": "Dashboards, insights" },
+        { "label": "Automação", "desc": "Ações, workflows, CRM" }
+      ]
+    },
+    "engineering": {
+      "badge": "Engenharia",
+      "headline": "Engenharia de software de alto nível",
+      "paragraph": "Nossas plataformas são construídas com arquitetura limpa, microsserviços, event-driven design e práticas enterprise. Cada linha de código segue padrões que garantem escalabilidade, manutenibilidade e performance.",
+      "items": [
+        "Clean Architecture + SOLID",
+        "Event-Driven Design",
+        "CI/CD com quality gates",
+        "Observabilidade total",
+        "Segurança por design"
+      ]
+    },
+    "tech": {
+      "badge": "Stack",
+      "headline": "Tecnologia que entrega resultado",
+      "subtitle": "Trabalhamos com as mesmas ferramentas que as maiores empresas de tecnologia do mundo."
+    },
+    "cta": {
+      "badge": "Próximo passo",
+      "headline": "Construa sua solução inteligente",
+      "subtitle": "Converse com nosso time de engenharia e descubra como podemos transformar seus desafios em vantagem competitiva.",
+      "button": "Falar com especialista",
+      "email": "contato@fmdsoluccoesinteligentes.com.br"
+    }
+  },
+  "products": {
+    "title": "Produtos",
+    "subtitle": "Conheça nosso ecossistema de produtos inteligentes.",
+    "screenshots_subtitle": "Capturas reais do produto em ação. Interface limpa, dados reais.",
+    "nyra": {
+      "name": "Nyra",
+      "tagline": "Inteligência comercial autônoma",
+      "description": "Múltiplos squads de IA trabalham em orquestração para captar, qualificar, analisar, definir estratégia e fechar vendas — com intervenção humana apenas quando necessário.",
+      "problem": "Vendas dependem de processos manuais, talentos escassos e decisões baseadas em intuição. Cada lead exige análise, estratégia, personalização e acompanhamento — tarefas que nenhum CRM sozinho resolve.",
+      "solution": "Nyra não é um CRM. É uma força de vendas artificial composta por squads especializados que executam todo o ciclo comercial de forma autônoma: captação, qualificação, análise de maturidade digital, definição de estratégia de abordagem, estabelecimento de tom e canal (e-mail, WhatsApp, LinkedIn), compreensão de dores, recomendação do produto ideal e entrega. Humanos entram apenas para decisões estratégicas e fechamentos complexos. A Nyra possui CRM próprio integrado à inteligência artificial, mas se o cliente já utiliza um CRM externo, a integração é rápida e transparente.",
+      "architecture": "Orquestrador de squads de IA → Módulo de Captação → Módulo de Qualificação → Analisador de Maturidade → Estrategista de Abordagem → Motor de Tom e Canal → Analisador de Dores → Recomendador de Produto → Executor de Vendas → Entregador. Cada squad é um microsserviço independente com seu próprio modelo de linguagem, base de conhecimento e métricas de performance. Economia de tokens, dados e tempo é o princípio fundamental de desenho.",
+      "modules": "Squad de Captação | Squad de Qualificação | Analista de Maturidade Digital | Estrategista de Abordagem | Motor de Canal e Tom | Analista de Dores | Recomendador de Produtos | Executor de Vendas | Squad de Entrega | Orquestrador Central | CRM Próprio com IA",
+      "integrations": "WhatsApp Cloud API | E-mail (SMTP/API) | LinkedIn Automation | CRM Externo (opcional) | ERP | Base de Conhecimento da Empresa | Data Lake de Conversas",
+      "use_cases": "Venda B2B complexa | Prospecção outbound inteligente | Atendimento inbound autônomo | Expansão de conta (upsell/cross-sell) | Recuperação de leads inativos | Venda técnica com múltiplos decisores",
+      "results": "Força de vendas artificial 24/7 | Economia de tokens e dados | Cada lead tratado como único | Humanos apenas no fechamento estratégico | Escala sem aumentar equipe"
+    },
+    "inmora": {
+      "name": "InMora",
+      "tagline": "Plataforma inteligente para o mercado imobiliário",
+      "description": "Tecnologia e dados para transformar a gestão e vendas no setor imobiliário.",
+      "problem": "Imobiliárias operam com processos manuais, dados fragmentados e atendimento reativo. Leads se perdem, visitas não são acompanhadas e o fechamento depende de sorte.",
+      "solution": "InMora centraliza gestão de imóveis, leads e contratos com inteligência artificial. Cada imóvel tem dados enriquecidos automaticamente. Cada lead recebe atendimento personalizado em escala.",
+      "features": "Gestão de Imóveis | CRM Imobiliário | IA para Recomendação | Tour Virtual | Contratos Digitais | Analytics",
+      "use_cases": "Recomendação inteligente de imóveis | Automação de visitas | Gestão de carteira | Análise de mercado",
+      "results": "3x mais visitas qualificadas | 50% menos tempo de fechamento | Gestão unificada de imóveis"
+    },
+    "opportunity_engine": {
+      "name": "Opportunity Engine",
+      "tagline": "Inteligência Econômica",
+      "description": "Plataforma de inteligência econômica baseada em dados públicos brasileiros.",
+      "problem": "Dados públicos brasileiros (IBGE, CAGED, RAIS, CNPJ) são ricos mas inacessíveis. Espalhados em formatos incompatíveis, sem padronização, sem escala.",
+      "solution": "Opportunity Engine ingere, processa e analisa dezenas de datasets públicos em uma plataforma unificada. Data lake estruturado, queries em DuckDB, scoring econômico em tempo real.",
+      "architecture": "Ingestão automatizada → DuckDB → BigQuery → Feature Store → Modelos de Scoring → API → Dashboard",
+      "datasets": "IBGE | CAGED | RAIS | CNPJ | RFB | SIDRA | IPEA",
+      "outputs": "Scoring Econômico | Inteligência de Mercado | Mapas de Calor | Indicadores Regionais | Séries Temporais",
+      "formats": "Parquet | Arrow | Delta Lake | OpenAPI | Streaming",
+      "use_cases": "Análise de mercado regional | Scoring de crédito | Inteligência competitiva | Expansão geográfica",
+      "results": "Dezenas de datasets unificados | Consultas em segundos | APIs prontas para consumo"
+    },
+    "intelligent_squads": {
+      "name": "Intelligent Squads",
+      "tagline": "Equipes multidisciplinares com IA",
+      "description": "Especialistas, IA, automação e engenharia trabalhando em sinergia.",
+      "problem": "Empresas precisam de tecnologia de alto nível mas não têm equipe interna. Contratar, treinar e reter talentos de engenharia é caro, lento e arriscado.",
+      "solution": "Intelligent Squads entrega equipes completas e elásticas — engenharia, dados, IA, design, QA — prontas para projetar e executar projetos complexos.",
+      "model": "Business → Discovery → UX → Software → Dados → IA → Cloud → QA → Deploy → Operação",
+      "specialties": "Engenharia de Software | Inteligência Artificial | Engenharia de Dados | Automação | Cloud | UX/UI | QA | DevOps",
+      "elasticity": "Squads crescem, diminuem e se especializam conforme a demanda. Um squad de IA hoje, um squad de dados amanhã, um squad completo de produto no próximo mês. Sem burocracia. Sem fricção.",
+      "use_cases": "Projetos greenfield | Aceleração de produto | Squads de IA | Data engineering as a service",
+      "results": "Time sob demanda | Custo previsível | Escalabilidade imediata | Expertise multidisciplinar"
+    }
+  },
+  "solutions": {
+    "title": "Soluções",
+    "subtitle": "Engenharia que transforma negócios através de tecnologia.",
+    "ai": "Inteligência Artificial",
+    "ai_desc": "Machine Learning, Deep Learning, NLP, Visão Computacional, GenAI, Agentes de IA e Sistemas Multi-Agente. Pesquisa e desenvolvimento em inteligência artificial aplicada.",
+    "ai_problem": "Modelos de IA genéricos não resolvem problemas de negócio específicos. Sem dados proprietários, arquitetura adequada e engenharia de ML, a IA não entrega valor real.",
+    "ai_approach": "Projetamos pipelines completos de IA: ingestão, feature engineering, treinamento, validação, deploy e monitoramento. Modelos em produção que aprendem e evoluem com seus dados.",
+      "ai_tech": "Python | PyTorch | TensorFlow | Hugging Face | LangChain | OpenAI | Anthropic | NVIDIA Nemotron | Qdrant | Milvus | MLflow",
+    "ai_results": "Precisão acima de 95% em modelos proprietários | Redução de custos operacionais | Automação de decisões complexas",
+    "software": "Engenharia de Software",
+    "software_desc": "Arquitetura limpa, microsserviços, APIs REST, sistemas escaláveis e plataformas SaaS completas. Padrões enterprise e boas práticas de engenharia.",
+    "software_problem": "Sistemas legados acumulam dívida técnica. Arquiteturas frágeis travam o crescimento. Cada nova feature é mais lenta e mais cara que a anterior.",
+    "software_approach": "Projetamos arquiteturas do zero — ou reestruturamos sistemas existentes — com Clean Architecture, DDD, Event-Driven Design e microsserviços. Cada decisão técnica é uma decisão de negócio.",
+    "software_tech": "TypeScript | Python | Go | Rust | Node.js | Next.js | React | PostgreSQL | Redis | Kafka | Docker | Kubernetes",
+    "software_results": "Sistemas que escalam sem reescrever | Deploy contínuo sem medo | Dívida técnica zero desde o primeiro commit",
+    "data": "Engenharia de Dados",
+    "data_desc": "Engenharia de dados, ETL/ELT, Data Warehouse, Data Lake, pipelines de dados e observabilidade. Transformando dados em decisões.",
+    "data_problem": "Dados brutos não geram valor. Sem pipelines robustos, qualidade e governança, empresas tomam decisões baseadas em informação incompleta ou incorreta.",
+    "data_approach": "Construímos pipelines de dados enterprise com qualidade desde a origem. Ingestão, transformação, armazenamento e disponibilização — tudo auditável, escalável e observável.",
+    "data_tech": "Python | DuckDB | BigQuery | dbt | Airflow | Spark | Kafka | Parquet | Delta Lake | Data Lakehouse",
+    "data_results": "Dados confiáveis em produção | Pipelines auto-reparáveis | Analytics em tempo real | Custo controlado",
+    "automation": "Automação Empresarial",
+    "automation_desc": "Automação de processos empresariais, RPA inteligente, orquestração de workflows e integração de sistemas. Eficiência operacional em escala.",
+    "automation_problem": "Processos manuais consomem tempo, geram erros e limitam o crescimento. Equipes afogadas em tarefas repetitivas não conseguem se concentrar no que realmente importa.",
+    "automation_approach": "Projetamos workflows inteligentes que integram sistemas, automatizam decisões e liberam equipes para atividades de alto valor. RPA com IA, orquestração e monitoramento.",
+    "automation_tech": "Python | n8n | Temporal | Docker | REST APIs | Webhooks | LLMs | RPA",
+    "automation_results": "80% menos tarefas manuais | Zero erros de processo | Escalabilidade imediata | ROI mensurável em semanas"
+  },
+  "about": {
+    "title": "Sobre",
+    "subtitle": "Engenharia de Software • IA • Dados • Automação",
+    "stat_years": "Anos de mercado",
+    "stat_products": "Produtos",
+    "stat_engineering": "Engenharia própria",
+    "stat_areas": "Áreas de atuação",
+    "hero_headline": "Projetamos o futuro da inteligência empresarial.",
+    "hero_text": "Arquitetura que transforma dados em decisões. Engenharia que constrói vantagem competitiva. Sistemas que evoluem com seu negócio.",
+    "philosophy_badge": "Filosofia Forge",
+    "philosophy_headline": "Quatro princípios. Um padrão de engenharia.",
+    "philosophy_text": "Tudo que construímos segue a filosofia Forge: uma abordagem sistemática que combina precisão de arquitetura, refinamento contínuo e evolução como padrão.",
+    "philosophy_build_title": "Construção",
+    "philosophy_build_desc": "Cada projeto é construído do zero com arquitetura limpa. Sem herança. Sem dívida técnica. Apenas engenharia sólida desde o primeiro commit.",
+    "philosophy_refine_title": "Refinamento",
+    "philosophy_refine_desc": "Sistemas vivos evoluem. Refinamos continuamente cada camada — dados, modelos, código, infraestrutura — com base em métricas reais de produção.",
+    "philosophy_precision_title": "Precisão",
+    "philosophy_precision_desc": "Cada linha de código, cada modelo, cada pipeline é projetado com intenção cirúrgica. Não fazemos aproximações. Engenhamos soluções.",
+    "philosophy_evolve_title": "Evolução",
+    "philosophy_evolve_desc": "Plataformas que se adaptam. À medida que seu negócio cresce, seus sistemas evoluem — sem reescritas traumáticas, sem interrupções, sem limites artificiais.",
+    "story_badge": "Nossa História",
+    "story_headline": "Engenharia que nasce de um problema real.",
+    "story_problem": "Empresas brasileiras de alto potencial enfrentam um gap: tecnologia de ponta existe, mas é inacessível — importada, cara, desconectada da realidade local. ERP não resolve. Planilha não escala. Consultoria não transforma.",
+    "story_vision": "A FMD nasceu para preencher esse gap. Não revendemos tecnologia — construímos. Plataformas proprietárias de inteligência artificial, dados e automação, projetadas com o mesmo rigor das maiores empresas de tecnologia do mundo.",
+    "story_evolution": "Desde 2020, evoluímos de um estúdio de engenharia para um ecossistema de produtos. Nyra, InMora, Opportunity Engine, Intelligent Squads — cada um resolvendo um problema real com arquitetura enterprise, dados reais e inteligência embarcada.",
+    "engineering_badge": "Engenharia",
+    "engineering_headline": "Software não é código. É arquitetura.",
+    "engineering_text": "Cada sistema que projetamos é tratado como um produto de engenharia — com planejamento, qualidade e evolução contínua. Nossos princípios de engenharia garantem que cada plataforma seja escalável, manutenível e preparada para o futuro.",
+    "engineering_principles": [
+      "Clean Architecture — domínio isolado, frameworks como detalhes",
+      "Event-Driven — sistemas que reagem em tempo real",
+      "Observabilidade — métricas, logs e tracing em cada camada",
+      "Segurança por Design — proteção desde a arquitetura",
+      "Qualidade como Padrão — CI/CD com testes e revisão em cada entrega",
+      "Dados como Ativo — pipelines governados, analytics embutido"
+    ],
+    "flow_badge": "Como construímos",
+    "flow_headline": "Da descoberta à operação. Um fluxo contínuo.",
+    "flow_steps": [
+      "Discovery",
+      "Arquitetura",
+      "Design",
+      "Software",
+      "Dados",
+      "IA",
+      "Cloud",
+      "Deploy",
+      "Melhoria Contínua"
+    ],
+    "vision_badge": "Visão",
+    "vision_headline": "Transformar dados em decisões inteligentes através de engenharia.",
+    "vision_text": "Acreditamos que o futuro da tecnologia está na integração profunda entre inteligência artificial, dados e engenharia de software. Não como camadas separadas, mas como um sistema coeso onde cada componente potencializa o outro. Nossa visão é construir plataformas que não apenas processam informação — mas que pensam, aprendem e evoluem com cada decisão.",
+    "diffs_badge": "Diferenciais",
+    "diffs_headline": "O que nos torna diferentes é o que nos torna melhores.",
+    "diffs_items": [
+      { "title": "Arquitetura Modular", "desc": "Cada plataforma é projetada em camadas independentes que podem evoluir separadamente. Trocamos tecnologias sem afetar o negócio." },
+      { "title": "Inteligência Artificial", "desc": "Modelos proprietários treinados com dados reais. NLP, visão computacional, agentes autônomos e sistemas multi-agente em produção." },
+      { "title": "Engenharia de Dados", "desc": "Pipelines enterprise que ingerem, transformam e disponibilizam dados com qualidade, governança e observabilidade." },
+      { "title": "Cloud Native", "desc": "Infraestrutura como código, escalabilidade horizontal, custo controlado. AWS, Azure e GCP com disaster recovery e alta disponibilidade." },
+      { "title": "Automação Inteligente", "desc": "Workflows que integram sistemas, automatizam decisões e liberam equipes. RPA com IA, orquestração e monitoramento." },
+      { "title": "Squads Elásticos", "desc": "Equipes multidisciplinares que crescem, diminuem e se especializam conforme a necessidade. Engenharia sob demanda sem burocracia." },
+      { "title": "Produtos Proprietários", "desc": "Plataformas próprias resolvendo problemas reais. Não somos uma consultoria que terceiriza — somos uma empresa de tecnologia que constrói." }
+    ],
+    "closing_badge": "Próximo passo",
+    "closing_headline": "Engenharia que entrega. Sistemas que evoluem.",
+    "closing_text": "Não construímos software para seguir tendências. Construímos plataformas inteligentes que transformam dados em vantagem competitiva. Cada arquitetura é uma decisão estratégica. Cada sistema é projetado para evoluir com seu negócio."
+  },
+  "values": {
+    "title": "Nossos Valores",
+    "engineering": "Engenharia em primeiro lugar",
+    "data_driven": "Inteligência orientada por dados",
+    "purpose": "Inovação com propósito",
+    "transparency": "Transparência",
+    "evolution": "Evolução contínua",
+    "results": "Compromisso com resultados"
+  },
+  "footer": {
+    "signature": "Dados • Automação • Inteligência",
+    "description": "Engenharia de Software, Inteligência Artificial, Dados e Automação. Soluções inteligentes para desafios reais.",
+    "description_en": "Software Engineering, Artificial Intelligence, Data and Automation. Intelligent solutions for real challenges.",
+    "nav_title": "Navegação",
+    "nav_title_en": "Navigation",
+    "social_title": "Redes",
+    "social_title_en": "Social",
+    "copyright": "FMD Soluções Inteligentes",
+    "rights": "Todos os direitos reservados.",
+    "rights_en": "All rights reserved.",
+    "tagline": "Feito com engenharia.",
+    "tagline_en": "Built with engineering.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "E-mail"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos prontos para construir sua solução inteligente.",
+    "subtitle_en": "We are ready to build your intelligent solution.",
+    "form_name": "Nome",
+    "form_email": "E-mail",
+    "form_company": "Empresa",
+    "form_message": "Mensagem",
+    "form_send": "Enviar",
+    "email_label": "E-mail",
+    "email_label_en": "Email"
+  }
+}

@@ -1,0 +1,44 @@
+name: fmd-design
+version: 1.0.0
+description: "Direção Visual, Wireframes e Identidade Gráfica — identidade visual exclusiva FMD, wireframes, geração de assets sem clichês de IA"
+author: FMD Soluções Inteligentes
+license: MIT
+slashPrefix: fmd-design
+
+aiox:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - ux-design-expert
+    - dev
+  tasks:
+    - create-wireframes.md
+    - define-visual-direction.md
+    - create-graphic-identity.md
+    - generate-assets.md
+    - create-style-guide.md
+  workflows: []
+  checklists: []
+  templates: []
+  tools: []
+  scripts: []
+
+config:
+  extends: extend
+  coding-standards: config/coding-standards.md
+  tech-stack: config/tech-stack.md
+  source-tree: config/source-tree.md
+
+dependencies:
+  node: []
+  python: []
+  squads:
+    - fmd-discovery
+
+tags:
+  - fmd
+  - design
+  - ux
+  - branding

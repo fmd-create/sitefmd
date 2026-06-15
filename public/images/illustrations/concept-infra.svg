@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <linearGradient id="cloudG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A5CFF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00C2FF" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <g opacity="0.06">
+    <rect x="50" y="50" width="400" height="400" rx="20" stroke="#0A5CFF" stroke-width="1"/>
+  </g>
+
+  <!-- Cloud shape -->
+  <path d="M120 280 Q100 280 95 260 Q80 250 90 230 Q85 210 100 200 Q100 170 130 165 Q140 140 170 140 Q200 130 220 150 Q250 140 270 155 Q290 145 310 160 Q340 155 350 180 Q370 185 370 210 Q380 225 370 240 Q380 260 360 270 Q370 290 350 300 L120 300" fill="url(#cloudG)" stroke="#0A5CFF" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Layers inside cloud -->
+  <rect x="160" y="200" width="180" height="24" rx="4" fill="#0A5CFF" fill-opacity="0.08" stroke="#0A5CFF" stroke-width="0.5" stroke-opacity="0.2"/>
+  <rect x="175" y="232" width="150" height="24" rx="4" fill="#0A5CFF" fill-opacity="0.06" stroke="#0A5CFF" stroke-width="0.5" stroke-opacity="0.2"/>
+  <rect x="190" y="264" width="120" height="24" rx="4" fill="#0A5CFF" fill-opacity="0.05" stroke="#0A5CFF" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <text x="250" y="215" text-anchor="middle" fill="#8B92A5" font-size="7" font-family="Geist, sans-serif" font-weight="600">COMPUTE</text>
+  <text x="250" y="247" text-anchor="middle" fill="#8B92A5" font-size="7" font-family="Geist, sans-serif" font-weight="600">STORAGE</text>
+  <text x="250" y="279" text-anchor="middle" fill="#8B92A5" font-size="7" font-family="Geist, sans-serif" font-weight="600">NETWORK</text>
+
+  <!-- Services outside cloud -->
+  <rect x="80" y="340" width="70" height="30" rx="5" fill="#1A1F2B" stroke="#2A2F3B" stroke-width="1"/>
+  <text x="115" y="359" text-anchor="middle" fill="#5A6275" font-size="7" font-family="Geist, sans-serif">Azure</text>
+
+  <rect x="215" y="340" width="70" height="30" rx="5" fill="#1A1F2B" stroke="#2A2F3B" stroke-width="1"/>
+  <text x="250" y="359" text-anchor="middle" fill="#5A6275" font-size="7" font-family="Geist, sans-serif">Supabase</text>
+
+  <rect x="350" y="340" width="70" height="30" rx="5" fill="#1A1F2B" stroke="#2A2F3B" stroke-width="1"/>
+  <text x="385" y="359" text-anchor="middle" fill="#5A6275" font-size="7" font-family="Geist, sans-serif">Docker</text>
+
+  <!-- Connections from cloud to services -->
+  <g stroke="#0A5CFF" stroke-width="0.5" opacity="0.2">
+    <line x1="120" y1="300" x2="115" y2="340"/>
+    <line x1="250" y1="300" x2="250" y2="340"/>
+    <line x1="380" y1="300" x2="385" y2="340"/>
+  </g>
+
+  <text x="250" y="450" text-anchor="middle" fill="#5A6275" font-size="9" font-family="Geist, sans-serif" font-weight="600" letter-spacing="3">INFRAESTRUTURA</text>
+</svg>
