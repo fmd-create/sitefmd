@@ -134,7 +134,7 @@ export default function HomePage() {
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0a5cff]" />
                   </span>
                   <span className="text-xs font-medium text-[#8b92a5] tracking-wider">
-                    {(messages.home as Record<string, unknown>).hero.badge}
+                    {(messages.home as any).hero.badge}
                   </span>
                 </div>
 
@@ -142,18 +142,18 @@ export default function HomePage() {
                   className="font-primary text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] tracking-tight"
                   style={{ animation: "slide-up 0.6s ease-out 0.1s forwards", opacity: 0 }}
                 >
-                  <span className="text-[#f5f7fa]">{(messages.home as Record<string, unknown>).hero.headline_line1}</span>
+                  <span className="text-[#f5f7fa]">{(messages.home as any).hero.headline_line1}</span>
                   <br />
-                  <span className="gradient-text-glow">{(messages.home as Record<string, unknown>).hero.headline_accent}</span>
+                  <span className="gradient-text-glow">{(messages.home as any).hero.headline_accent}</span>
                   <br />
-                  <span className="text-[#f5f7fa]">{(messages.home as Record<string, unknown>).hero.headline_line2}</span>
+                  <span className="text-[#f5f7fa]">{(messages.home as any).hero.headline_line2}</span>
                 </h1>
 
                 <p
                   className="mt-6 text-base sm:text-lg text-[#8b92a5] leading-relaxed max-w-md"
                   style={{ animation: "slide-up 0.6s ease-out 0.2s forwards", opacity: 0 }}
                 >
-                  {(messages.home as Record<string, unknown>).hero.subtitle}
+                  {(messages.home as any).hero.subtitle}
                 </p>
 
                 <div
@@ -164,14 +164,14 @@ export default function HomePage() {
                     href={`/${locale}/contact`}
                     className="group inline-flex items-center gap-2 rounded-xl bg-[#0a5cff] px-7 py-3.5 text-sm font-medium text-white transition-all duration-200 hover:bg-[#0045cc] hover:shadow-glow active:scale-[0.97]"
                   >
-                    {(messages.home as Record<string, unknown>).hero.cta_primary}
+                    {(messages.home as any).hero.cta_primary}
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link
                     href={`/${locale}/products`}
                     className="group inline-flex items-center gap-2 rounded-xl border border-[#2a2f3b] bg-[#1a1f2b]/80 px-7 py-3.5 text-sm font-medium text-[#f5f7fa] transition-all duration-200 hover:border-[#3a4a6b] hover:bg-[#1a1f2b]"
                   >
-                    {(messages.home as Record<string, unknown>).hero.cta_secondary}
+                    {(messages.home as any).hero.cta_secondary}
                   </Link>
                 </div>
 
@@ -181,17 +181,17 @@ export default function HomePage() {
                 >
                   <div>
                     <span className="font-primary text-2xl font-bold gradient-text">4</span>
-                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_platforms_label}</p>
+                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as any).hero.metric_platforms_label}</p>
                   </div>
                   <div className="w-px h-10 bg-[#2a2f3b]" />
                   <div>
                     <span className="font-primary text-2xl font-bold gradient-text">+20</span>
-                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_techs_label}</p>
+                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as any).hero.metric_techs_label}</p>
                   </div>
                   <div className="w-px h-10 bg-[#2a2f3b]" />
                   <div>
                     <span className="font-primary text-2xl font-bold gradient-text">100%</span>
-                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as Record<string, unknown>).hero.metric_engineering_label}</p>
+                    <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as any).hero.metric_engineering_label}</p>
                   </div>
                 </div>
               </div>
@@ -225,9 +225,9 @@ export default function HomePage() {
                 <div className="absolute -bottom-4 left-8 right-8 flex items-center justify-between px-6 py-3 rounded-lg border border-[#2a2f3b] bg-[#0a0f1e]/80 backdrop-blur-sm">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
-                    <span className="text-xs text-[#8b92a5]">{(messages.home as Record<string, unknown>).hero.in_production}</span>
+                    <span className="text-xs text-[#8b92a5]">{(messages.home as any).hero.in_production}</span>
                   </div>
-                  <span className="text-xs text-[#5a6275]">{(messages.home as Record<string, unknown>).hero.screenshots}</span>
+                  <span className="text-xs text-[#5a6275]">{(messages.home as any).hero.screenshots}</span>
                 </div>
               </div>
             </div>
@@ -235,7 +235,7 @@ export default function HomePage() {
 
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
             <span className="text-[10px] text-[#5a6275] uppercase tracking-[0.2em] font-medium">
-              {(messages.home as Record<string, unknown>).hero.scroll}
+              {(messages.home as any).hero.scroll}
             </span>
             <div className="h-12 w-px bg-gradient-to-b from-[#0a5cff] to-transparent animate-pulse-slow" />
             <div className="w-1 h-1 rounded-full bg-[#0a5cff] animate-ping absolute bottom-1" />
@@ -254,26 +254,26 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-5 gap-16 items-center">
                 <div className="lg:col-span-3">
                   <span className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase">
-                    {(messages.home as Record<string, unknown>).about.badge}
+                    {(messages.home as any).about.badge}
                   </span>
                   <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#f5f7fa] max-w-xl">
-                    {(messages.home as Record<string, unknown>).about.headline}
+                    {(messages.home as any).about.headline}
                   </h2>
                   <p className="mt-6 text-base leading-relaxed text-[#8b92a5] max-w-lg">
-                    {(messages.home as Record<string, unknown>).about.paragraph1}
+                    {(messages.home as any).about.paragraph1}
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-[#5a6275] max-w-lg">
-                    {(messages.home as Record<string, unknown>).about.paragraph2}
+                    {(messages.home as any).about.paragraph2}
                   </p>
                   <div className="mt-8 flex items-center gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[#0a5cff] to-[#00c2ff]">
                       <span className="text-sm font-bold text-white">F</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#f5f7fa]">{(messages.home as Record<string, unknown>).about.forge_label}</p>
-                      <p className="text-xs text-[#5a6275]">{(messages.home as Record<string, unknown>).about.forge_subtitle}</p>
+                      <p className="text-sm font-medium text-[#f5f7fa]">{(messages.home as any).about.forge_label}</p>
+                      <p className="text-xs text-[#5a6275]">{(messages.home as any).about.forge_subtitle}</p>
                       <p className="mt-3 text-xs leading-relaxed text-[#5a6275]/70 max-w-sm">
-                        {(messages.home as Record<string, unknown>).about.forge_description}
+                        {(messages.home as any).about.forge_description}
                       </p>
                     </div>
                   </div>
@@ -298,13 +298,13 @@ export default function HomePage() {
             <RevealOnScroll>
               <div className="max-w-xl mb-16">
                 <span className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase">
-                  {(messages.home as Record<string, unknown>).products.badge}
+                  {(messages.home as any).products.badge}
                 </span>
                 <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#f5f7fa]">
-                  {(messages.home as Record<string, unknown>).products.headline}
+                  {(messages.home as any).products.headline}
                 </h2>
                 <p className="mt-3 text-[#8b92a5]">
-                  {(messages.home as Record<string, unknown>).products.subtitle}
+                  {(messages.home as any).products.subtitle}
                 </p>
               </div>
             </RevealOnScroll>
@@ -331,13 +331,13 @@ export default function HomePage() {
                             className="mb-4"
                           />
                           <h3 className="font-primary text-2xl font-semibold text-[#f5f7fa] tracking-tight">
-                            {((messages.products as Record<string, unknown>)[prod.key] as Record<string, unknown>).name}
+                            {((messages.products as any)[prod.key] as any).name}
                           </h3>
                           <p className="mt-1 text-sm font-medium" style={{ color: prod.color }}>
-                            {((messages.products as Record<string, unknown>)[prod.key] as Record<string, unknown>).tagline}
+                            {((messages.products as any)[prod.key] as any).tagline}
                           </p>
                           <p className="mt-4 text-sm leading-relaxed text-[#8b92a5] max-w-sm">
-                            {((messages.products as Record<string, unknown>)[prod.key] as Record<string, unknown>).description}
+                            {((messages.products as any)[prod.key] as any).description}
                           </p>
                         </div>
                       </div>
@@ -413,13 +413,13 @@ export default function HomePage() {
             <RevealOnScroll>
               <div className="max-w-xl mb-16">
                 <span className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase">
-                  {(messages.home as Record<string, unknown>).methodology.badge}
+                  {(messages.home as any).methodology.badge}
                 </span>
                 <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#f5f7fa]">
-                  {(messages.home as Record<string, unknown>).methodology.headline}
+                  {(messages.home as any).methodology.headline}
                 </h2>
                 <p className="mt-3 text-[#8b92a5]">
-                  {(messages.home as Record<string, unknown>).methodology.subtitle}
+                  {(messages.home as any).methodology.subtitle}
                 </p>
               </div>
             </RevealOnScroll>
@@ -437,7 +437,7 @@ export default function HomePage() {
             </RevealOnScroll>
 
             <div className="mt-12 grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-              {(messages.home as Record<string, unknown>).methodology.steps.map((step: { label: string; desc: string }, i: number) => (
+              {(messages.home as any).methodology.steps.map((step: { label: string; desc: string }, i: number) => (
                 <RevealOnScroll key={step.label}>
                   <div className="text-center group">
                     <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2f3b] bg-[#0a0f1e]/50 group-hover:border-[#0a5cff]/30 transition-colors">
@@ -462,16 +462,16 @@ export default function HomePage() {
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <span className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase">
-                    {(messages.home as Record<string, unknown>).engineering.badge}
+                    {(messages.home as any).engineering.badge}
                   </span>
                   <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#f5f7fa]">
-                    {(messages.home as Record<string, unknown>).engineering.headline}
+                    {(messages.home as any).engineering.headline}
                   </h2>
                   <p className="mt-6 text-base leading-relaxed text-[#8b92a5]">
-                    {(messages.home as Record<string, unknown>).engineering.paragraph}
+                    {(messages.home as any).engineering.paragraph}
                   </p>
                   <ul className="mt-8 space-y-3">
-                    {(messages.home as Record<string, unknown>).engineering.items.map((item: string) => (
+                    {(messages.home as any).engineering.items.map((item: string) => (
                       <li key={item} className="flex items-center gap-3 text-sm text-[#8b92a5]">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0a5cff]" />
                         {item}
@@ -514,13 +514,13 @@ export default function HomePage() {
             <RevealOnScroll>
               <div className="max-w-xl mb-16">
                   <span className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase">
-                    {(messages.home as Record<string, unknown>).tech.badge}
+                    {(messages.home as any).tech.badge}
                   </span>
                   <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#f5f7fa]">
-                    {(messages.home as Record<string, unknown>).tech.headline}
+                    {(messages.home as any).tech.headline}
                   </h2>
                   <p className="mt-3 text-[#8b92a5]">
-                    {(messages.home as Record<string, unknown>).tech.subtitle}
+                    {(messages.home as any).tech.subtitle}
                   </p>
               </div>
             </RevealOnScroll>
@@ -588,13 +588,13 @@ export default function HomePage() {
           <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
             <RevealOnScroll>
                 <span className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase">
-                  {(messages.home as Record<string, unknown>).cta.badge}
+                  {(messages.home as any).cta.badge}
                 </span>
                 <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-[#f5f7fa]">
-                  {(messages.home as Record<string, unknown>).cta.headline}
+                  {(messages.home as any).cta.headline}
                 </h2>
                 <p className="mx-auto mt-4 max-w-md text-[#8b92a5]">
-                  {(messages.home as Record<string, unknown>).cta.subtitle}
+                  {(messages.home as any).cta.subtitle}
                 </p>
             </RevealOnScroll>
 
@@ -604,14 +604,14 @@ export default function HomePage() {
                   href={`/${locale}/contact`}
                   className="group inline-flex items-center gap-2 rounded-xl bg-[#0a5cff] px-8 py-4 text-sm font-medium text-white transition-all duration-200 hover:bg-[#0045cc] hover:shadow-glow active:scale-[0.97]"
                 >
-                  {(messages.home as Record<string, unknown>).cta.button}
+                  {(messages.home as any).cta.button}
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
                   href="mailto:contato@fmdsoluccoesinteligentes.com.br"
                   className="group inline-flex items-center gap-2 rounded-xl border border-[#2a2f3b] px-8 py-4 text-sm font-medium text-[#f5f7fa] transition-all duration-200 hover:border-[#3a4a6b]"
                 >
-                  {(messages.home as Record<string, unknown>).cta.email}
+                  {(messages.home as any).cta.email}
                 </a>
               </div>
             </RevealOnScroll>

@@ -21,20 +21,23 @@ export function ParticleBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const cvs = canvas;
+    const ctxt = ctx;
+
     const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      cvs.width = window.innerWidth;
+      cvs.height = window.innerHeight;
     };
     resize();
     window.addEventListener("resize", resize);
 
-    const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 20000));
+    const particleCount = Math.min(50, Math.floor((cvs.width * cvs.height) / 20000));
     const particles: Particle[] = [];
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
+        x: Math.random() * cvs.width,
+        y: Math.random() * cvs.height,
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         size: Math.random() * 2 + 0.5,
@@ -45,22 +48,22 @@ export function ParticleBackground() {
     let animId: number;
 
     function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctxt.clearRect(0, 0, cvs.width, cvs.height);
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
         p.x += p.vx;
         p.y += p.vy;
 
-        if (p.x < 0) p.x = canvas.width;
-        if (p.x > canvas.width) p.x = 0;
-        if (p.y < 0) p.y = canvas.height;
-        if (p.y > canvas.height) p.y = 0;
+        if (p.x < 0) p.x = cvs.width;
+        if (p.x > cvs.width) p.x = 0;
+        if (p.y < 0) p.y = cvs.height;
+        if (p.y > cvs.height) p.y = 0;
 
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(10, 92, 255, ${p.opacity})`;
-        ctx.fill();
+        ctxt.beginPath();
+        ctxt.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctxt.fillStyle = `rgba(10, 92, 255, ${p.opacity})`;
+        ctxt.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
@@ -69,11 +72,11 @@ export function ParticleBackground() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < 150) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(10, 92, 255, ${0.06 * (1 - dist / 150)})`;
-            ctx.stroke();
+            ctxt.beginPath();
+            ctxt.moveTo(p.x, p.y);
+            ctxt.lineTo(p2.x, p2.y);
+            ctxt.strokeStyle = `rgba(10, 92, 255, ${0.06 * (1 - dist / 150)})`;
+            ctxt.stroke();
           }
         }
       }

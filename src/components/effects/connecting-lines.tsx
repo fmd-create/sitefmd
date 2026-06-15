@@ -31,18 +31,19 @@ export function ConnectingLines() {
         }
       }
 
-      svg.setAttribute("viewBox", `0 0 ${window.innerWidth} ${document.documentElement.scrollHeight}`);
+      const s = svg!;
+      s.setAttribute("viewBox", `0 0 ${window.innerWidth} ${document.documentElement.scrollHeight}`);
 
-      while (svg.childNodes.length > newLines.length) {
-        svg.removeChild(svg.lastChild!);
+      while (s.childNodes.length > newLines.length) {
+        s.removeChild(s.lastChild!);
       }
-      while (svg.childNodes.length < newLines.length) {
+      while (s.childNodes.length < newLines.length) {
         const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        svg.appendChild(line);
+        s.appendChild(line);
       }
 
       newLines.forEach((line, i) => {
-        const el = svg.childNodes[i] as SVGLineElement;
+        const el = s.childNodes[i] as SVGLineElement;
         el.setAttribute("x1", String(line.x1));
         el.setAttribute("y1", String(line.y1));
         el.setAttribute("x2", String(line.x2));

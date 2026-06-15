@@ -32,18 +32,21 @@ export function NeuralParticles() {
     const NODE_COUNT = 45;
     const CONNECTION_DIST = 140;
 
+    const cvs = canvas!;
+    const ctxt = ctx;
+
     function resize() {
-      const parent = canvas.parentElement!;
+      const parent = cvs.parentElement!;
       w = parent.clientWidth;
       h = parent.clientHeight;
       if (w < 1) w = 400;
       if (h < 1) h = 340;
       const dpr = window.devicePixelRatio || 1;
-      canvas!.width = w * dpr;
-      canvas!.height = h * dpr;
-      canvas!.style.width = `${w}px`;
-      canvas!.style.height = `${h}px`;
-      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cvs.width = w * dpr;
+      cvs.height = h * dpr;
+      cvs.style.width = `${w}px`;
+      cvs.style.height = `${h}px`;
+      ctxt.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
     function initNodes() {
@@ -75,18 +78,18 @@ export function NeuralParticles() {
     }
 
     function draw() {
-      ctx!.clearRect(0, 0, w, h);
+      ctxt.clearRect(0, 0, w, h);
 
       const time = Date.now() * 0.001;
       const dim = Math.min(w, h);
 
       // Background glow orb
-      const bgGlow = ctx!.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, dim * 0.5);
+      const bgGlow = ctxt.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, dim * 0.5);
       bgGlow.addColorStop(0, `rgba(10, 92, 255, ${0.04 + 0.03 * Math.sin(time * 0.3)})`);
       bgGlow.addColorStop(0.5, `rgba(0, 194, 255, ${0.02 + 0.02 * Math.sin(time * 0.4 + 1)})`);
       bgGlow.addColorStop(1, "rgba(10, 92, 255, 0)");
-      ctx!.fillStyle = bgGlow;
-      ctx!.fillRect(0, 0, w, h);
+      ctxt.fillStyle = bgGlow;
+      ctxt.fillRect(0, 0, w, h);
 
       // Update nodes
       for (const n of nodes) {
@@ -120,12 +123,12 @@ export function NeuralParticles() {
             const alpha = t * t * 0.3;
             const avgPulse = 0.5 + 0.5 * Math.sin((a.pulse + b.pulse) * 0.5 + time * 0.3);
 
-            ctx!.strokeStyle = `rgba(0, 194, 255, ${alpha * (0.2 + avgPulse * 0.8)})`;
-            ctx!.lineWidth = 0.3 + t * 1.2 * a.z * b.z;
-            ctx!.beginPath();
-            ctx!.moveTo(a.x, a.y);
-            ctx!.lineTo(b.x, b.y);
-            ctx!.stroke();
+            ctxt.strokeStyle = `rgba(0, 194, 255, ${alpha * (0.2 + avgPulse * 0.8)})`;
+            ctxt.lineWidth = 0.3 + t * 1.2 * a.z * b.z;
+            ctxt.beginPath();
+            ctxt.moveTo(a.x, a.y);
+            ctxt.lineTo(b.x, b.y);
+            ctxt.stroke();
           }
         }
       }
@@ -137,25 +140,25 @@ export function NeuralParticles() {
 
         // Outer glow (depth-scaled)
         const glowR = r * (5 + n.z * 4);
-        const glow = ctx!.createRadialGradient(n.x, n.y, 0, n.x, n.y, glowR);
+        const glow = ctxt.createRadialGradient(n.x, n.y, 0, n.x, n.y, glowR);
         glow.addColorStop(0, `rgba(0, 194, 255, ${0.15 * n.z})`);
         glow.addColorStop(1, "rgba(0, 194, 255, 0)");
-        ctx!.fillStyle = glow;
-        ctx!.beginPath();
-        ctx!.arc(n.x, n.y, glowR, 0, Math.PI * 2);
-        ctx!.fill();
+        ctxt.fillStyle = glow;
+        ctxt.beginPath();
+        ctxt.arc(n.x, n.y, glowR, 0, Math.PI * 2);
+        ctxt.fill();
 
         // Core
-        ctx!.fillStyle = `rgba(10, 92, 255, ${(0.5 + pulseFactor * 0.5) * n.z})`;
-        ctx!.beginPath();
-        ctx!.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx!.fill();
+        ctxt.fillStyle = `rgba(10, 92, 255, ${(0.5 + pulseFactor * 0.5) * n.z})`;
+        ctxt.beginPath();
+        ctxt.arc(n.x, n.y, r, 0, Math.PI * 2);
+        ctxt.fill();
 
         // Hot core
-        ctx!.fillStyle = `rgba(245, 247, 250, ${(0.2 + pulseFactor * 0.6) * n.z})`;
-        ctx!.beginPath();
-        ctx!.arc(n.x, n.y, r * 0.3, 0, Math.PI * 2);
-        ctx!.fill();
+        ctxt.fillStyle = `rgba(245, 247, 250, ${(0.2 + pulseFactor * 0.6) * n.z})`;
+        ctxt.beginPath();
+        ctxt.arc(n.x, n.y, r * 0.3, 0, Math.PI * 2);
+        ctxt.fill();
       }
 
       raf = requestAnimationFrame(draw);
@@ -166,7 +169,7 @@ export function NeuralParticles() {
     draw();
 
     const ro = new ResizeObserver(resize);
-    ro.observe(canvas.parentElement!);
+    ro.observe(cvs.parentElement!);
 
     return () => {
       cancelAnimationFrame(raf);
