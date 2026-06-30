@@ -10,11 +10,11 @@
   "home": {
     "hero": {
       "badge": "FMD Soluções Inteligentes",
-      "headline_line1": "Engineering that",
-      "headline_accent": "turns data",
-      "headline_line2": "into decisions",
-      "subtitle": "We design intelligent systems for sales automation, economic intelligence and data engineering — from Brazil to the world.",
-      "cta_primary": "Start a project",
+      "headline_line1": "Brazilian technology that builds",
+      "headline_accent": "the future of business intelligence",
+      "headline_line2": "",
+      "subtitle": "From commercial automation with Nyra to economic intelligence with Opportunity Engine — FMD designs intelligent platforms that turn data into decisions and processes into competitive advantage.",
+      "cta_primary": "Request a Demo",
       "cta_secondary": "View products",
       "metric_platforms_label": "Proprietary platforms",
       "metric_techs_label": "Integrated technologies",
@@ -38,15 +38,13 @@
       "subtitle": "Each product is an independent platform, built with the same high-level engineering."
     },
     "methodology": {
-      "badge": "Methodology",
-      "headline": "Data → Intelligence → Decision",
-      "subtitle": "Every FMD solution follows an engineering pipeline that transforms raw data into intelligent automation.",
+      "badge": "Architecture",
+      "headline": "Cloud-Native. Secure. Scalable.",
+      "subtitle": "Built for the cloud with the highest standards of security and performance.",
       "steps": [
-        { "label": "Collection", "desc": "APIs, databases, files" },
-        { "label": "Processing", "desc": "ETL, pipelines, lake" },
-        { "label": "Intelligence", "desc": "ML, NLP, agents" },
-        { "label": "Visualization", "desc": "Dashboards, insights" },
-        { "label": "Automation", "desc": "Actions, workflows, CRM" }
+        { "label": "Cloud-Native", "desc": "100% cloud infrastructure" },
+        { "label": "Encryption", "desc": "End-to-end protection" },
+        { "label": "Elasticity", "desc": "On-demand scaling" }
       ]
     },
     "engineering": {
@@ -64,13 +62,13 @@
     "tech": {
       "badge": "Stack",
       "headline": "Technology that delivers results",
-      "subtitle": "We work with the same tools as the biggest tech companies in the world."
+      "subtitle": "Built with the most modern software engineering stack."
     },
     "cta": {
       "badge": "Next step",
-      "headline": "Build your intelligent solution",
-      "subtitle": "Talk to our engineering team and discover how we can transform your challenges into competitive advantage.",
-      "button": "Talk to an expert",
+      "headline": "Ready to centralize your business intelligence?",
+      "subtitle": "Schedule a personalized demo and discover how the FMD platform can transform your processes into competitive advantage.",
+      "button": "Schedule a Demo",
       "email": "contato@fmdsoluccoesinteligentes.com.br"
     }
   },
@@ -80,8 +78,9 @@
     "screenshots_subtitle": "Real product screenshots in action. Clean interface, real data.",
     "nyra": {
       "name": "Nyra",
-      "tagline": "Autonomous sales intelligence",
-      "description": "Multiple AI squads work in orchestration to capture, qualify, analyze, strategize and close deals — with human intervention only when necessary.",
+      "tagline": "Intelligent sales process automation",
+      "description": "AI-powered system for automating commercial processes and customer service, designed to structure, interpret and execute operational workflows from customer interactions across multiple channels. Its architecture is based on multiple specialized AI agents that work in parallel, executing functions such as semantic interpretation, data extraction and workflow automation. Built with Node.js, Next.js, Supabase and AI integrated with Microsoft Azure.",
+      "playground": "Nyra's Playground is an interactive environment where you can test and simulate the behavior of artificial intelligence agents in real time. It allows you to run conversation scenarios, evaluate responses, adjust flows and observe how the system interprets and processes different types of interactions. This environment is used to validate agent behavior before production deployment, ensuring greater control over results and system performance.",
       "problem": "Sales depend on manual processes, scarce talent and intuition-based decisions. Every lead requires analysis, strategy, personalization and follow-up — tasks that no CRM alone can solve.",
       "solution": "Nyra is not a CRM. It's an artificial sales force composed of specialized squads that autonomously execute the entire sales cycle: capture, qualification, digital maturity analysis, approach strategy definition, tone and channel selection (email, WhatsApp, LinkedIn), pain point understanding, ideal product recommendation and delivery. Humans step in only for strategic decisions and complex closings. Nyra has its own built-in CRM integrated with artificial intelligence, but if a client already uses an external CRM, integration is fast and seamless.",
       "architecture": "AI squad orchestrator → Capture Module → Qualification Module → Maturity Analyzer → Approach Strategist → Tone & Channel Engine → Pain Point Analyzer → Product Recommender → Sales Executor → Delivery. Each squad is an independent microservice with its own language model, knowledge base and performance metrics. Token, data and time economy is the fundamental design principle.",
@@ -244,7 +243,10 @@
     "tagline_en": "Built with engineering.",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "email": "Email"
+    "email": "Email",
+    "legal_title": "Legal",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
   },
   "contact": {
     "title": "Contact Us",

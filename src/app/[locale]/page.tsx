@@ -6,7 +6,7 @@ import Script from "next/script";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useLocale, useMessages } from "@/i18n/next-intl-provider";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Server, Lock, Zap } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { ParticleBackground } from "@/components/effects/particles";
 import { ConnectingLines } from "@/components/effects/connecting-lines";
@@ -122,7 +122,7 @@ export default function HomePage() {
           />
 
           <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-24 pb-16">
+            <div className="pt-24 pb-16 max-w-3xl mx-auto text-center">
               {/* Left */}
               <div>
                 <div
@@ -150,14 +150,14 @@ export default function HomePage() {
                 </h1>
 
                 <p
-                  className="mt-6 text-base sm:text-lg text-[#8b92a5] leading-relaxed max-w-md"
+                  className="mt-6 text-base sm:text-lg text-[#8b92a5] leading-relaxed max-w-2xl mx-auto"
                   style={{ animation: "slide-up 0.6s ease-out 0.2s forwards", opacity: 0 }}
                 >
                   {(messages.home as any).hero.subtitle}
                 </p>
 
                 <div
-                  className="mt-8 flex flex-col sm:flex-row gap-3"
+                  className="mt-8 flex flex-col sm:flex-row gap-3 justify-center"
                   style={{ animation: "slide-up 0.6s ease-out 0.3s forwards", opacity: 0 }}
                 >
                   <Link
@@ -176,7 +176,7 @@ export default function HomePage() {
                 </div>
 
                 <div
-                  className="mt-12 flex items-center gap-8 flex-wrap"
+                  className="mt-12 flex items-center gap-8 flex-wrap justify-center"
                   style={{ animation: "slide-up 0.6s ease-out 0.4s forwards", opacity: 0 }}
                 >
                   <div>
@@ -193,41 +193,6 @@ export default function HomePage() {
                     <span className="font-primary text-2xl font-bold gradient-text">100%</span>
                     <p className="text-xs text-[#5a6275] mt-0.5">{(messages.home as any).hero.metric_engineering_label}</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Right: Nyra Dashboard Mockup */}
-              <div
-                className="relative hidden lg:block"
-                style={{ animation: "slide-up 0.8s ease-out 0.3s forwards", opacity: 0 }}
-              >
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-[#0a5cff]/20 via-transparent to-[#00c2ff]/10 rounded-2xl blur-2xl" />
-                  <div className="relative rounded-xl border border-[#2a2f3b] overflow-hidden shadow-2xl bg-[#0a0f1e]">
-                    <div className="flex items-center gap-1.5 px-4 py-3 border-b border-[#2a2f3b]">
-                      <span className="w-3 h-3 rounded-full bg-[#ef4444]" />
-                      <span className="w-3 h-3 rounded-full bg-[#f59e0b]" />
-                      <span className="w-3 h-3 rounded-full bg-[#10b981]" />
-                      <span className="ml-3 text-xs text-[#5a6275] font-mono">Nyra — Dashboard</span>
-                    </div>
-                    <Image
-                      src="/images/products/nyra/dashboard.png"
-                      alt="Nyra Dashboard"
-                      width={1200}
-                      height={800}
-                      className="w-full h-auto"
-                      priority
-                    />
-                  </div>
-                  <div className="absolute -bottom-6 -right-6 w-64 h-32 bg-gradient-to-tl from-[#0a5cff]/10 to-transparent rounded-full blur-3xl" />
-                </div>
-
-                <div className="absolute -bottom-4 left-8 right-8 flex items-center justify-between px-6 py-3 rounded-lg border border-[#2a2f3b] bg-[#0a0f1e]/80 backdrop-blur-sm">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse" />
-                    <span className="text-xs text-[#8b92a5]">{(messages.home as any).hero.in_production}</span>
-                  </div>
-                  <span className="text-xs text-[#5a6275]">{(messages.home as any).hero.screenshots}</span>
                 </div>
               </div>
             </div>
@@ -342,15 +307,19 @@ export default function HomePage() {
                         </div>
                       </div>
 
-                      {prod.key === "nyra" && prod.mockup && (
-                        <div className="mt-8 rounded-lg border border-[#2a2f3b] overflow-hidden group-hover:border-[#0a5cff]/30 transition-colors duration-500">
-                          <Image
-                            src={prod.mockup}
-                            alt="Nyra interface"
-                            width={600}
-                            height={380}
-                            className="w-full h-auto"
-                          />
+                      {prod.key === "nyra" && (
+                        <div className="mt-8 rounded-lg border border-[#2a2f3b] overflow-hidden bg-[#050816]/50 group-hover:border-[#0a5cff]/30 transition-colors duration-500">
+                          <div className="relative" style={{ paddingBottom: "62.5%" }}>
+                            <video
+                              src="/images/products/nyra/demo.mp4"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="absolute inset-0 w-full h-full"
+                              style={{ objectFit: "cover", marginTop: "-4%" }}
+                            />
+                          </div>
                         </div>
                       )}
 
@@ -403,7 +372,7 @@ export default function HomePage() {
         </section>
 
         {/* ═══════════════════════════════════════════
-            COMO TRANSFORMAMOS — Flow diagram
+            ARQUITETURA — Cloud-Native. Segura. Escalável.
            ═══════════════════════════════════════════ */}
         <section className="relative py-28 md:py-36 overflow-hidden">
           <div className="absolute inset-0 bg-grid opacity-20" />
@@ -424,27 +393,49 @@ export default function HomePage() {
               </div>
             </RevealOnScroll>
 
-            <RevealOnScroll>
-              <div className="rounded-xl border border-[#2a2f3b] bg-[#0a0f1e]/50 p-6 md:p-10 overflow-hidden">
-                <Image
-                  src="/images/illustrations/flow-diagram.svg"
-                  alt="Pipeline: Dados → Engenharia → IA → Decisão → Automação"
-                  width={900}
-                  height={120}
-                  className="w-full h-auto"
-                />
-              </div>
-            </RevealOnScroll>
-
-            <div className="mt-12 grid gap-6 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
-              {(messages.home as any).methodology.steps.map((step: { label: string; desc: string }, i: number) => (
-                <RevealOnScroll key={step.label}>
-                  <div className="text-center group">
-                    <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[#2a2f3b] bg-[#0a0f1e]/50 group-hover:border-[#0a5cff]/30 transition-colors">
-                      <span className="text-xs font-bold text-[#0a5cff]">{i + 1}</span>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  icon: Server,
+                  title: "Cloud-Native",
+                  desc: "Infraestrutura 100% em nuvem com escalabilidade horizontal, deploys automatizados e alta disponibilidade. Sua plataforma opera com a mesma robustez das big techs.",
+                  tags: ["AWS", "Azure", "Kubernetes", "Docker"]
+                },
+                {
+                  icon: Lock,
+                  title: "Criptografia de Ponta a Ponta",
+                  desc: "Dados protegidos em trânsito e em repouso com criptografia AES-256. Certificação SSL/TLS, isolamento por inquilino e conformidade com as mais rigorosas normas de segurança.",
+                  tags: ["AES-256", "SSL/TLS", "LGPD", "ISO 27001"]
+                },
+                {
+                  icon: Zap,
+                  title: "Pronta para Escalar",
+                  desc: "Arquitetura modular baseada em microsserviços que cresce com seu negócio. Cada módulo escala independentemente — sem reescritas, sem interrupções, sem limites artificiais.",
+                  tags: ["Microsserviços", "Elasticidade", "Alta performance"]
+                }
+              ].map((pillar) => (
+                <RevealOnScroll key={pillar.title}>
+                  <div className="group relative overflow-hidden rounded-xl border border-[#2a2f3b] bg-[#0a0f1e]/50 p-8 md:p-10 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:border-[#0a5cff]/30">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-b from-[#0a5cff]/5 via-transparent to-transparent" />
+                    <div className="relative z-10">
+                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#0a5cff]/20 to-[#00c2ff]/10 border border-[#2a2f3b] group-hover:border-[#0a5cff]/30 transition-colors">
+                        <pillar.icon size={24} className="text-[#0a5cff]" />
+                      </div>
+                      <h3 className="mt-5 font-primary text-xl font-semibold text-[#f5f7fa] tracking-tight">
+                        {pillar.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-[#8b92a5]">
+                        {pillar.desc}
+                      </p>
+                      <div className="mt-6 flex flex-wrap justify-center gap-2">
+                        {pillar.tags.map((tag) => (
+                          <span key={tag} className="inline-flex items-center rounded-full border border-[#2a2f3b] bg-[#1a1f2b]/50 px-3 py-1 text-xs text-[#5a6275] group-hover:text-[#8b92a5] transition-colors">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <p className="text-sm font-medium text-[#f5f7fa]">{step.label}</p>
-                    <p className="text-xs text-[#5a6275] mt-1">{step.desc}</p>
+                    <div className="absolute bottom-0 left-6 right-6 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-[#0a5cff]/40 to-transparent" />
                   </div>
                 </RevealOnScroll>
               ))}

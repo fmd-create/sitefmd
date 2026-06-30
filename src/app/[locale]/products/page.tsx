@@ -68,7 +68,7 @@ export default function ProductsPage() {
           return (
             <section
               key={key}
-              className="relative py-28 md:py-36 overflow-hidden"
+              className="relative py-20 md:py-24 overflow-hidden"
             >
               <div className="absolute inset-0 forge-grid opacity-30" />
               <div
@@ -102,7 +102,7 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Problem / Solution */}
-                <div className="grid lg:grid-cols-2 gap-12 mb-16">
+                <div className="grid lg:grid-cols-2 gap-10 mb-12">
                   <div>
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-3">
                       {locale === "pt" ? "Problema" : "Problem"}
@@ -123,7 +123,7 @@ export default function ProductsPage() {
 
                 {/* Architecture / Modules */}
                 {prod?.architecture && (
-                  <div className="mb-16 p-6 rounded-lg border border-[#2a2f3b]/50 bg-[#0a0f1e]/40">
+                  <div className="mb-10 p-6 rounded-lg border border-[#2a2f3b]/50 bg-[#0a0f1e]/40">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Arquitetura" : "Architecture"}
                     </div>
@@ -135,7 +135,7 @@ export default function ProductsPage() {
 
                 {/* Nyra-specific: Squad Orchestration Flow */}
                 {key === "nyra" && prod?.modules && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-6">
                       {locale === "pt" ? "Squads em Orquestração" : "Squads in Orchestration"}
                     </div>
@@ -167,7 +167,7 @@ export default function ProductsPage() {
 
                 {/* Modules or Features (non-Nyra) */}
                 {key !== "nyra" && prod?.modules && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="flex flex-wrap gap-2">
                       {(prod.modules as string).split(" | ").map((mod: string, i: number) => (
                         <span
@@ -187,7 +187,7 @@ export default function ProductsPage() {
                 )}
 
                 {prod?.features && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="flex flex-wrap gap-2">
                       {(prod.features as string).split(" | ").map((feat: string, i: number) => (
                         <span
@@ -206,9 +206,28 @@ export default function ProductsPage() {
                   </div>
                 )}
 
+                {/* Nyra-specific: Playground */}
+                {key === "nyra" && prod?.playground && (
+                  <div className="mb-10 p-6 rounded-lg border border-[#0a5cff]/20 bg-[#0a5cff]/5">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0a5cff]/10 shrink-0">
+                        <span className="text-sm font-bold text-[#0a5cff]">P</span>
+                      </div>
+                      <div>
+                        <div className="text-xs font-semibold tracking-[0.15em] text-[#0a5cff] uppercase mb-2">
+                          {locale === "pt" ? "Playground" : "Playground"}
+                        </div>
+                        <p className="text-sm text-[#8b92a5] leading-relaxed">
+                          {prod?.playground as string}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Use Cases */}
                 {prod?.use_cases && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Casos de Uso" : "Use Cases"}
                     </div>
@@ -225,7 +244,7 @@ export default function ProductsPage() {
 
                 {/* Results */}
                 {prod?.results && (
-                  <div className="mb-16 p-6 rounded-lg border border-[#2a2f3b]/30 bg-[#0a0f1e]/30">
+                  <div className="mb-10 p-6 rounded-lg border border-[#2a2f3b]/30 bg-[#0a0f1e]/30">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Resultados" : "Results"}
                     </div>
@@ -241,7 +260,7 @@ export default function ProductsPage() {
 
                 {/* Specialties (IS) / Datasets (OE) / Integrations (Nyra) */}
                 {prod?.specialties && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Especialidades" : "Specialties"}
                     </div>
@@ -256,7 +275,7 @@ export default function ProductsPage() {
                 )}
 
                 {prod?.datasets && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Fontes de Dados" : "Data Sources"}
                     </div>
@@ -272,7 +291,7 @@ export default function ProductsPage() {
 
                 {/* Elasticity (IS specific) */}
                 {prod?.elasticity && (
-                  <div className="mb-16 p-6 rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/40">
+                  <div className="mb-10 p-6 rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/40">
                     <p className="text-sm text-[#8b92a5] leading-relaxed italic">
                       &ldquo;{prod?.elasticity as string}&rdquo;
                     </p>
@@ -281,7 +300,7 @@ export default function ProductsPage() {
 
                 {/* Model / Flow for IS */}
                 {prod?.model && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Fluxo do Squad" : "Squad Flow"}
                     </div>
@@ -309,7 +328,7 @@ export default function ProductsPage() {
 
                 {/* Integrations */}
                 {prod?.integrations && (
-                  <div className="mb-16">
+                  <div className="mb-10">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Integrações" : "Integrations"}
                     </div>
@@ -327,27 +346,20 @@ export default function ProductsPage() {
                 {key === "nyra" && (
                   <div>
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-6">
-                      {locale === "pt" ? "Interface" : "Interface"}
+                      {locale === "pt" ? "Demonstração" : "Demo"}
                     </div>
-                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                      {nyraScreenshots.map((img) => (
-                        <div
-                          key={img.file}
-                          className="group relative overflow-hidden rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/50"
-                        >
-                          <Image
-                            src={`/images/products/nyra/${encodeURIComponent(img.file)}`}
-                            alt={img.alt}
-                            width={600}
-                            height={380}
-                            className="w-full h-auto transition-all duration-500 group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                          <div className="absolute bottom-0 left-0 right-0 translate-y-full p-4 transition-transform duration-300 group-hover:translate-y-0">
-                            <span className="text-xs font-medium text-white">{img.alt}</span>
-                          </div>
-                        </div>
-                      ))}
+                    <div className="rounded-xl border border-[#2a2f3b]/40 bg-[#0a0f1e]/50 overflow-hidden shadow-2xl">
+                      <div className="relative" style={{ paddingBottom: "56.25%" }}>
+                        <video
+                          src="/images/products/nyra/demo.mp4"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="absolute inset-0 w-full h-full"
+                          style={{ objectFit: "cover", marginTop: "-4%" }}
+                        />
+                      </div>
                     </div>
                   </div>
                 )}
@@ -417,7 +429,7 @@ export default function ProductsPage() {
 
                 {/* Divider between products */}
                 {pi < productKeys.length - 1 && (
-                  <div className="mt-16 h-px bg-gradient-to-r from-transparent via-[#2a2f3b] to-transparent" />
+                  <div className="mt-10 h-px bg-gradient-to-r from-transparent via-[#2a2f3b] to-transparent" />
                 )}
               </div>
             </section>

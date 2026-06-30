@@ -10,11 +10,11 @@
   "home": {
     "hero": {
       "badge": "FMD Soluções Inteligentes",
-      "headline_line1": "Engenharia que",
-      "headline_accent": "transforma dados",
-      "headline_line2": "em decisões",
-      "subtitle": "Projetamos sistemas inteligentes de automação comercial, inteligência econômica e engenharia de dados — do Brasil para o mundo.",
-      "cta_primary": "Iniciar projeto",
+      "headline_line1": "Tecnologia brasileira que constrói",
+      "headline_accent": "o futuro da inteligência empresarial",
+      "headline_line2": "",
+      "subtitle": "Da automação comercial com Nyra à inteligência econômica com Opportunity Engine — a FMD projeta plataformas inteligentes que transformam dados em decisões e processos em vantagem competitiva.",
+      "cta_primary": "Solicitar Demonstração",
       "cta_secondary": "Conhecer produtos",
       "metric_platforms_label": "Plataformas proprietárias",
       "metric_techs_label": "Tecnologias integradas",
@@ -38,15 +38,13 @@
       "subtitle": "Cada produto é uma plataforma independente, construída com a mesma engenharia de alto nível."
     },
     "methodology": {
-      "badge": "Metodologia",
-      "headline": "Dado → Inteligência → Decisão",
-      "subtitle": "Toda solução FMD segue um pipeline de engenharia que transforma dados brutos em automação inteligente.",
+      "badge": "Arquitetura",
+      "headline": "Cloud-Native. Segura. Escalável.",
+      "subtitle": "Construída para a nuvem com os mais altos padrões de segurança e performance.",
       "steps": [
-        { "label": "Coleta", "desc": "APIs, bancos, arquivos" },
-        { "label": "Processamento", "desc": "ETL, pipelines, lake" },
-        { "label": "Inteligência", "desc": "ML, NLP, agentes" },
-        { "label": "Visualização", "desc": "Dashboards, insights" },
-        { "label": "Automação", "desc": "Ações, workflows, CRM" }
+        { "label": "Cloud-Native", "desc": "Infraestrutura 100% em nuvem" },
+        { "label": "Criptografia", "desc": "Proteção de ponta a ponta" },
+        { "label": "Elasticidade", "desc": "Escala sob demanda" }
       ]
     },
     "engineering": {
@@ -64,13 +62,13 @@
     "tech": {
       "badge": "Stack",
       "headline": "Tecnologia que entrega resultado",
-      "subtitle": "Trabalhamos com as mesmas ferramentas que as maiores empresas de tecnologia do mundo."
+      "subtitle": "Construído com o que há de mais moderno em engenharia de software."
     },
     "cta": {
       "badge": "Próximo passo",
-      "headline": "Construa sua solução inteligente",
-      "subtitle": "Converse com nosso time de engenharia e descubra como podemos transformar seus desafios em vantagem competitiva.",
-      "button": "Falar com especialista",
+      "headline": "Pronto para centralizar a inteligência do seu negócio?",
+      "subtitle": "Agende uma demonstração personalizada e descubra como a plataforma FMD pode transformar seus processos em vantagem competitiva.",
+      "button": "Agendar uma Demo",
       "email": "contato@fmdsoluccoesinteligentes.com.br"
     }
   },
@@ -80,8 +78,9 @@
     "screenshots_subtitle": "Capturas reais do produto em ação. Interface limpa, dados reais.",
     "nyra": {
       "name": "Nyra",
-      "tagline": "Inteligência comercial autônoma",
-      "description": "Múltiplos squads de IA trabalham em orquestração para captar, qualificar, analisar, definir estratégia e fechar vendas — com intervenção humana apenas quando necessário.",
+      "tagline": "Automação inteligente de processos comerciais",
+      "description": "Sistema de automação de processos comerciais e atendimento baseado em inteligência artificial, projetado para estruturar, interpretar e executar fluxos operacionais a partir de interações com clientes em múltiplos canais. Sua arquitetura é baseada em múltiplos agentes de IA especializados que operam de forma paralela e coordenada, executando funções como interpretação semântica, extração de dados e automação de fluxos. Construída com Node.js, Next.js, Supabase e IA integrada ao Microsoft Azure.",
+      "playground": "O Playground da Nyra é um ambiente interativo onde é possível testar e simular o comportamento dos agentes de inteligência artificial em tempo real. Ele permite executar cenários de conversa, avaliar respostas, ajustar fluxos e observar como o sistema interpreta e processa diferentes tipos de interações. Esse ambiente é usado para validar o funcionamento dos agentes antes da aplicação em produção, garantindo maior controle sobre os resultados e o comportamento do sistema.",
       "problem": "Vendas dependem de processos manuais, talentos escassos e decisões baseadas em intuição. Cada lead exige análise, estratégia, personalização e acompanhamento — tarefas que nenhum CRM sozinho resolve.",
       "solution": "Nyra não é um CRM. É uma força de vendas artificial composta por squads especializados que executam todo o ciclo comercial de forma autônoma: captação, qualificação, análise de maturidade digital, definição de estratégia de abordagem, estabelecimento de tom e canal (e-mail, WhatsApp, LinkedIn), compreensão de dores, recomendação do produto ideal e entrega. Humanos entram apenas para decisões estratégicas e fechamentos complexos. A Nyra possui CRM próprio integrado à inteligência artificial, mas se o cliente já utiliza um CRM externo, a integração é rápida e transparente.",
       "architecture": "Orquestrador de squads de IA → Módulo de Captação → Módulo de Qualificação → Analisador de Maturidade → Estrategista de Abordagem → Motor de Tom e Canal → Analisador de Dores → Recomendador de Produto → Executor de Vendas → Entregador. Cada squad é um microsserviço independente com seu próprio modelo de linguagem, base de conhecimento e métricas de performance. Economia de tokens, dados e tempo é o princípio fundamental de desenho.",
@@ -244,7 +243,10 @@
     "tagline_en": "Built with engineering.",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "email": "E-mail"
+    "email": "E-mail",
+    "legal_title": "Legal",
+    "terms": "Termos de Uso",
+    "privacy": "Política de Privacidade"
   },
   "contact": {
     "title": "Entre em Contato",

@@ -92,14 +92,39 @@ export function Footer() {
                 {mf?.email as string}
               </a>
             </div>
+
+            <h4 className="mb-5 mt-8 text-xs font-semibold tracking-[0.1em] text-[#f5f7fa] uppercase">
+              {mf?.legal_title as string}
+            </h4>
+            <div className="flex flex-col gap-3">
+              <Link
+                href={`/${locale}/termos-de-uso`}
+                className="group inline-flex items-center gap-1.5 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+              >
+                {mf?.terms as string}
+                <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+              </Link>
+              <Link
+                href={`/${locale}/politica-de-privacidade`}
+                className="group inline-flex items-center gap-1.5 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+              >
+                {mf?.privacy as string}
+                <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+              </Link>
+            </div>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-[#2a2f3b] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#5a6275]">
-            &copy; {new Date().getFullYear()} {mf?.copyright as string}.{" "}
-            {mf?.rights as string}
-          </p>
+          <div className="flex flex-col items-center sm:items-start gap-1">
+            <p className="text-xs text-[#5a6275]">
+              &copy; {new Date().getFullYear()} {mf?.copyright as string}.{" "}
+              {mf?.rights as string}
+            </p>
+            <p className="text-xs text-[#4a5265]">
+              F. M. Dottori LTDA - CNPJ: 58.617.025/0001-19
+            </p>
+          </div>
           <p className="text-xs text-[#5a6275]">
             {mf?.tagline as string}
           </p>
