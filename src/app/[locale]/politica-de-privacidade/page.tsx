@@ -117,8 +117,8 @@ export default function PrivacidadePage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "A FMD não vende dados pessoais dos Usuários. Podemos compartilhar dados com: (a) provedores de infraestrutura em nuvem (Azure); (b) processadores de pagamento; (c) autoridades competentes quando exigido por lei. Todos os terceiros com quem compartilhamos dados são obrigados a manter padrões de segurança compatíveis com esta Política."
-                    : "FMD does not sell Users' personal data. We may share data with: (a) cloud infrastructure providers (Azure); (b) payment processors; (c) competent authorities when required by law. All third parties with whom we share data are required to maintain security standards compatible with this Policy."}
+                    ? "A FMD não vende dados pessoais dos Usuários. Podemos compartilhar dados com: (a) provedores de infraestrutura em nuvem; (b) processadores de pagamento; (c) autoridades competentes quando exigido por lei. Todos os terceiros com quem compartilhamos dados são obrigados a manter padrões de segurança compatíveis com esta Política."
+                    : "FMD does not sell Users' personal data. We may share data with: (a) cloud infrastructure providers; (b) payment processors; (c) competent authorities when required by law. All third parties with whom we share data are required to maintain security standards compatible with this Policy."}
                 </p>
               </section>
 
@@ -128,8 +128,8 @@ export default function PrivacidadePage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "Empregamos medidas técnicas e organizacionais para proteger seus dados pessoais, incluindo: criptografia AES-256 em repouso e TLS 1.3 em trânsito, controle de acesso baseado em papéis (RBAC), monitoramento contínuo de segurança, backups criptografados e testes regulares de penetração. Nossa infraestrutura está hospedada em data centers certificados da Microsoft Azure."
-                    : "We employ technical and organizational measures to protect your personal data, including: AES-256 encryption at rest and TLS 1.3 in transit, role-based access control (RBAC), continuous security monitoring, encrypted backups and regular penetration testing. Our infrastructure is hosted in Microsoft Azure certified data centers."}
+                    ? "Empregamos medidas técnicas e organizacionais para proteger seus dados pessoais, incluindo: criptografia em repouso e TLS 1.3 em trânsito, controle de acesso baseado em papéis (RBAC), monitoramento contínuo de segurança e práticas alinhadas a padrões do setor."
+                    : "We employ technical and organizational measures to protect your personal data, including: encryption at rest and TLS 1.3 in transit, role-based access control (RBAC), continuous security monitoring and practices aligned with industry standards."}
                 </p>
               </section>
 

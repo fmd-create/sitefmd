@@ -1,23 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useMessages, useLocale } from "@/i18n/next-intl-provider";
-import { ArrowRight, Zap, Globe, BarChart3, Layers, CheckCircle } from "lucide-react";
+import { ArrowRight, Zap, MessageCircle, CheckCircle, ExternalLink } from "lucide-react";
 
 const productIcons: Record<string, typeof Zap> = {
   nyra: Zap,
-  inmora: Globe,
-  opportunity_engine: BarChart3,
-  intelligent_squads: Layers,
+  nyra_connect: MessageCircle,
 };
 
 const productColors: Record<string, string> = {
   nyra: "#0a5cff",
-  inmora: "#10b981",
-  opportunity_engine: "#8b5cf6",
-  intelligent_squads: "#f59e0b",
+  nyra_connect: "#00c2ff",
 };
 
 const nyraScreenshots = [
@@ -29,14 +26,24 @@ const nyraScreenshots = [
   { file: "playground.png", alt: "Nyra Playground" },
 ];
 
-const oeScreenshots = ["kpis.jpg", "ranking.jpg", "trends.jpg", "map.jpg"];
+const nyraConnectScreenshots = [
+  "photo_1_2026-09-15_17-00-58.jpg",
+  "photo_2_2026-09-15_17-01-00.jpg",
+  "photo_3_2026-09-15_17-01-00.jpg",
+  "photo_4_2026-09-15_17-01-00.jpg",
+  "photo_5_2026-09-15_17-01-00.jpg",
+  "photo_6_2026-09-15_17-01-00.jpg",
+  "photo_7_2026-09-15_17-01-00.jpg",
+  "photo_8_2026-09-15_17-01-00.jpg",
+  "photo_9_2026-09-15_17-01-00.jpg",
+];
 
 export default function ProductsPage() {
   const messages = useMessages();
   const locale = useLocale();
   const mp = messages?.products as any;
 
-  const productKeys = ["nyra", "inmora", "opportunity_engine", "intelligent_squads"];
+  const productKeys = ["nyra", "nyra_connect"];
 
   return (
     <>
@@ -68,6 +75,7 @@ export default function ProductsPage() {
           return (
             <section
               key={key}
+              id={key}
               className="relative py-20 md:py-24 overflow-hidden"
             >
               <div className="absolute inset-0 forge-grid opacity-30" />
@@ -121,8 +129,8 @@ export default function ProductsPage() {
                   </div>
                 </div>
 
-                {/* Architecture / Modules */}
-                {prod?.architecture && (
+                {/* Architecture / Modules (Nyra only) */}
+                {key === "nyra" && prod?.architecture && (
                   <div className="mb-10 p-6 rounded-lg border border-[#2a2f3b]/50 bg-[#0a0f1e]/40">
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
                       {locale === "pt" ? "Arquitetura" : "Architecture"}
@@ -130,6 +138,30 @@ export default function ProductsPage() {
                     <p className="text-sm text-[#f5f7fa] font-mono leading-relaxed">
                       {prod?.architecture as string}
                     </p>
+                  </div>
+                )}
+
+                {/* Features (Nyra Connect) */}
+                {key === "nyra_connect" && prod?.features && (
+                  <div className="mb-10">
+                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
+                      {locale === "pt" ? "Funcionalidades" : "Features"}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {(prod.features as string).split(" | ").map((feat: string, i: number) => (
+                        <span
+                          key={i}
+                          className="text-xs px-3 py-1.5 rounded-full border"
+                          style={{
+                            borderColor: `${color}30`,
+                            background: `${color}08`,
+                            color: "#f5f7fa",
+                          }}
+                        >
+                          {feat}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 )}
 
@@ -165,47 +197,6 @@ export default function ProductsPage() {
                   </div>
                 )}
 
-                {/* Modules or Features (non-Nyra) */}
-                {key !== "nyra" && prod?.modules && (
-                  <div className="mb-10">
-                    <div className="flex flex-wrap gap-2">
-                      {(prod.modules as string).split(" | ").map((mod: string, i: number) => (
-                        <span
-                          key={i}
-                          className="text-xs px-3 py-1.5 rounded-full border"
-                          style={{
-                            borderColor: `${color}30`,
-                            background: `${color}08`,
-                            color: "#f5f7fa",
-                          }}
-                        >
-                          {mod}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {prod?.features && (
-                  <div className="mb-10">
-                    <div className="flex flex-wrap gap-2">
-                      {(prod.features as string).split(" | ").map((feat: string, i: number) => (
-                        <span
-                          key={i}
-                          className="text-xs px-3 py-1.5 rounded-full border"
-                          style={{
-                            borderColor: `${color}30`,
-                            background: `${color}08`,
-                            color: "#f5f7fa",
-                          }}
-                        >
-                          {feat}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
                 {/* Nyra-specific: Playground */}
                 {key === "nyra" && prod?.playground && (
                   <div className="mb-10 p-6 rounded-lg border border-[#0a5cff]/20 bg-[#0a5cff]/5">
@@ -221,6 +212,22 @@ export default function ProductsPage() {
                           {prod?.playground as string}
                         </p>
                       </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Integrations (Nyra only) */}
+                {key === "nyra" && prod?.integrations && (
+                  <div className="mb-10">
+                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
+                      {locale === "pt" ? "Integrações" : "Integrations"}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {(prod.integrations as string).split(" | ").map((int: string, i: number) => (
+                        <span key={i} className="text-xs px-3 py-1.5 rounded-md bg-[#1a1f2b] text-[#8b92a5]">
+                          {int}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -258,87 +265,19 @@ export default function ProductsPage() {
                   </div>
                 )}
 
-                {/* Specialties (IS) / Datasets (OE) / Integrations (Nyra) */}
-                {prod?.specialties && (
+                {/* Nyra Connect access button */}
+                {key === "nyra_connect" && (
                   <div className="mb-10">
-                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
-                      {locale === "pt" ? "Especialidades" : "Specialties"}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {(prod.specialties as string).split(" | ").map((s: string, i: number) => (
-                        <span key={i} className="text-xs px-3 py-1.5 rounded-md bg-[#1a1f2b] text-[#8b92a5]">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {prod?.datasets && (
-                  <div className="mb-10">
-                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
-                      {locale === "pt" ? "Fontes de Dados" : "Data Sources"}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {(prod.datasets as string).split(" | ").map((ds: string, i: number) => (
-                        <span key={i} className="text-xs px-3 py-1.5 rounded-md bg-[#1a1f2b] text-[#8b92a5]">
-                          {ds}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Elasticity (IS specific) */}
-                {prod?.elasticity && (
-                  <div className="mb-10 p-6 rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/40">
-                    <p className="text-sm text-[#8b92a5] leading-relaxed italic">
-                      &ldquo;{prod?.elasticity as string}&rdquo;
-                    </p>
-                  </div>
-                )}
-
-                {/* Model / Flow for IS */}
-                {prod?.model && (
-                  <div className="mb-10">
-                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
-                      {locale === "pt" ? "Fluxo do Squad" : "Squad Flow"}
-                    </div>
-                    <div className="flex flex-wrap items-center gap-1">
-                      {(prod.model as string).split(" → ").map((m: string, i: number) => (
-                        <div key={i} className="flex items-center">
-                          <span
-                            className="text-xs px-2.5 py-1.5 rounded-md font-medium"
-                            style={{
-                              background: `${color}10`,
-                              color: "#f5f7fa",
-                              border: `1px solid ${color}25`,
-                            }}
-                          >
-                            {m}
-                          </span>
-                          {i < (prod.model as string).split(" → ").length - 1 && (
-                            <ArrowRight size={12} className="mx-1 text-[#2a2f3b]" />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Integrations */}
-                {prod?.integrations && (
-                  <div className="mb-10">
-                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-4">
-                      {locale === "pt" ? "Integrações" : "Integrations"}
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {(prod.integrations as string).split(" | ").map((int: string, i: number) => (
-                        <span key={i} className="text-xs px-3 py-1.5 rounded-md bg-[#1a1f2b] text-[#8b92a5]">
-                          {int}
-                        </span>
-                      ))}
-                    </div>
+                    <a
+                      href="https://app.fmdsoluccoesinteligentes.com.br"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:shadow-glow active:scale-[0.97]"
+                      style={{ backgroundColor: color }}
+                    >
+                      {locale === "pt" ? "Acessar Nyra Connect" : "Access Nyra Connect"}
+                      <ExternalLink size={14} className="transition-transform group-hover:translate-x-1" />
+                    </a>
                   </div>
                 )}
 
@@ -361,68 +300,33 @@ export default function ProductsPage() {
                         />
                       </div>
                     </div>
+                    <div className="mt-6 text-xs text-[#5a6275]">
+                      {mp?.screenshots_subtitle as string}
+                    </div>
                   </div>
                 )}
 
-                {/* Opportunity Engine screenshots */}
-                {key === "opportunity_engine" && (
+                {/* Screenshots — Nyra Connect */}
+                {key === "nyra_connect" && (
                   <div>
                     <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-6">
-                      {locale === "pt" ? "Visualizações" : "Visualizations"}
+                      {locale === "pt" ? "Capturas de Tela" : "Screenshots"}
                     </div>
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      {oeScreenshots.map((img) => (
+                    <div className="grid gap-4 grid-cols-2 sm:grid-cols-3">
+                      {nyraConnectScreenshots.map((img) => (
                         <div
                           key={img}
                           className="rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/50 overflow-hidden group"
                         >
                           <Image
-                            src={`/images/products/opportunity-engine/${encodeURIComponent(img)}`}
-                            alt="Opportunity Engine"
-                            width={600}
-                            height={380}
+                            src={`/images/products/nyra-connect/${encodeURIComponent(img)}`}
+                            alt="Nyra Connect"
+                            width={400}
+                            height={300}
                             className="w-full h-auto transition-all duration-500 group-hover:scale-105"
                           />
                         </div>
                       ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* IS Dashboard */}
-                {key === "intelligent_squads" && (
-                  <div>
-                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-6">
-                      {locale === "pt" ? "Dashboard" : "Dashboard"}
-                    </div>
-                    <div className="rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/50 overflow-hidden">
-                      <Image
-                        src="/images/products/intelligent-squads/dashboard.png"
-                        alt="Intelligent Squads"
-                        width={1200}
-                        height={800}
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </div>
-                )}
-
-                {/* InMora video */}
-                {key === "inmora" && (
-                  <div>
-                    <div className="text-xs font-semibold tracking-[0.15em] text-[#5a6275] uppercase mb-6">
-                      {locale === "pt" ? "Demonstração" : "Demo"}
-                    </div>
-                    <div className="rounded-lg border border-[#2a2f3b]/40 bg-[#0a0f1e]/50 overflow-hidden">
-                      <video
-                        src="/images/products/inmora/demo.webm"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-auto"
-                        style={{ opacity: 0.9 }}
-                      />
                     </div>
                   </div>
                 )}

@@ -10,17 +10,17 @@
   "home": {
     "hero": {
       "badge": "FMD Soluções Inteligentes",
-      "headline_line1": "Brazilian technology that builds",
-      "headline_accent": "the future of business intelligence",
+      "headline_line1": "AI-powered intelligence",
+      "headline_accent": "for your commercial operations",
       "headline_line2": "",
-      "subtitle": "From commercial automation with Nyra to economic intelligence with Opportunity Engine — FMD designs intelligent platforms that turn data into decisions and processes into competitive advantage.",
+      "subtitle": "FMD builds AI-powered commercial intelligence platforms — Revenue Operations, AI agents, workflow automation and data intelligence to transform how your company sells, serves and grows.",
       "cta_primary": "Request a Demo",
       "cta_secondary": "View products",
       "metric_platforms_label": "Proprietary platforms",
       "metric_techs_label": "Integrated technologies",
       "metric_engineering_label": "In-house engineering",
       "in_production": "In production",
-      "screenshots": "9 real screenshots",
+      "screenshots": "real screenshots",
       "scroll": "Scroll to explore"
     },
     "about": {
@@ -32,19 +32,34 @@
       "forge_subtitle": "Build • Refine • Evolve • Precision",
       "forge_description": "Engineering that doesn't just build, but transforms — where every line of code, every AI model, and every data point follows the same rigor: precise architecture, disciplined execution, and constant evolution."
     },
+    "pipeline": {
+      "badge": "FMD Engineering",
+      "headline": "Data → Intelligence → Agents → Automation → Action",
+      "subtitle": "Our architecture converts raw data into actionable intelligence through specialized AI agents that automate and amplify commercial decisions.",
+      "step1_title": "Data",
+      "step1_desc": "Ingestion, processing and enrichment of data from multiple sources — conversations, leads, market, CRM.",
+      "step2_title": "Intelligence",
+      "step2_desc": "AI models and multi-agent systems that analyze, classify and extract insights in real time.",
+      "step3_title": "AI Agents",
+      "step3_desc": "Specialized orchestrated agents that execute commercial functions autonomously and in coordination.",
+      "step4_title": "Automation",
+      "step4_desc": "Intelligent workflows that automate prospecting, qualification, service and follow-up.",
+      "step5_title": "Commercial Action",
+      "step5_desc": "Data-driven strategic decisions, automated execution and measurable results."
+    },
     "products": {
-      "badge": "Ecosystem",
-      "headline": "Products that deliver",
+      "badge": "Products",
+      "headline": "Two platforms. One commercial intelligence ecosystem.",
       "subtitle": "Each product is an independent platform, built with the same high-level engineering."
     },
     "methodology": {
       "badge": "Architecture",
-      "headline": "Cloud-Native. Secure. Scalable.",
-      "subtitle": "Built for the cloud with the highest standards of security and performance.",
+      "headline": "Modular. Secure. Scalable.",
+      "subtitle": "Built for continuous evolution with the highest engineering standards.",
       "steps": [
-        { "label": "Cloud-Native", "desc": "100% cloud infrastructure" },
-        { "label": "Encryption", "desc": "End-to-end protection" },
-        { "label": "Elasticity", "desc": "On-demand scaling" }
+        { "label": "Modular Architecture", "desc": "Systems in independent layers" },
+        { "label": "Security by Design", "desc": "Protection built into development" },
+        { "label": "Scalability", "desc": "Each module scales on demand" }
       ]
     },
     "engineering": {
@@ -55,7 +70,7 @@
         "Clean Architecture + SOLID",
         "Event-Driven Design",
         "CI/CD with quality gates",
-        "Total observability",
+        "Observability in architecture",
         "Security by design"
       ]
     },
@@ -74,12 +89,12 @@
   },
   "products": {
     "title": "Products",
-    "subtitle": "Discover our ecosystem of intelligent products.",
+    "subtitle": "Discover our commercial intelligence platforms.",
     "screenshots_subtitle": "Real product screenshots in action. Clean interface, real data.",
     "nyra": {
       "name": "Nyra",
-      "tagline": "Intelligent sales process automation",
-      "description": "AI-powered system for automating commercial processes and customer service, designed to structure, interpret and execute operational workflows from customer interactions across multiple channels. Its architecture is based on multiple specialized AI agents that work in parallel, executing functions such as semantic interpretation, data extraction and workflow automation. Built with Node.js, Next.js, Supabase and AI integrated with Microsoft Azure.",
+      "tagline": "AI-powered Revenue Operations and Sales Intelligence platform",
+      "description": "Commercial intelligence platform based on multi-agent architecture, combining specialized AI agents, data intelligence, workflow automation and decision support. Nyra acts as an intelligence layer over your commercial operations, integrating data, qualifying leads, automating prospecting and amplifying every stage of the sales cycle.",
       "playground": "Nyra's Playground is an interactive environment where you can test and simulate the behavior of artificial intelligence agents in real time. It allows you to run conversation scenarios, evaluate responses, adjust flows and observe how the system interprets and processes different types of interactions. This environment is used to validate agent behavior before production deployment, ensuring greater control over results and system performance.",
       "problem": "Sales depend on manual processes, scarce talent and intuition-based decisions. Every lead requires analysis, strategy, personalization and follow-up — tasks that no CRM alone can solve.",
       "solution": "Nyra is not a CRM. It's an artificial sales force composed of specialized squads that autonomously execute the entire sales cycle: capture, qualification, digital maturity analysis, approach strategy definition, tone and channel selection (email, WhatsApp, LinkedIn), pain point understanding, ideal product recommendation and delivery. Humans step in only for strategic decisions and complex closings. Nyra has its own built-in CRM integrated with artificial intelligence, but if a client already uses an external CRM, integration is fast and seamless.",
@@ -89,40 +104,15 @@
       "use_cases": "Complex B2B sales | Intelligent outbound prospecting | Autonomous inbound service | Account expansion (upsell/cross-sell) | Inactive lead recovery | Technical sales with multiple decision makers",
       "results": "24/7 artificial sales force | Token and data economy | Every lead treated as unique | Humans only for strategic closing | Scale without adding headcount"
     },
-    "inmora": {
-      "name": "InMora",
-      "tagline": "Intelligent platform for real estate",
-      "description": "Data and technology to transform real estate management and sales.",
-      "problem": "Real estate agencies operate with manual processes, fragmented data and reactive service. Leads get lost, visits go untracked, closing depends on luck.",
-      "solution": "InMora centralizes property, lead and contract management with artificial intelligence. Every property is automatically enriched. Every lead gets personalized service at scale.",
-      "features": "Property Management | Real Estate CRM | AI Recommendations | Virtual Tour | Digital Contracts | Analytics",
-      "use_cases": "Smart property recommendation | Visit automation | Portfolio management | Market analysis",
-      "results": "3x more qualified visits | 50% less closing time | Unified property management"
-    },
-    "opportunity_engine": {
-      "name": "Opportunity Engine",
-      "tagline": "Economic Intelligence",
-      "description": "Economic intelligence platform based on Brazilian public data.",
-      "problem": "Brazilian public data (IBGE, CAGED, RAIS, CNPJ) is rich but inaccessible. Scattered across incompatible formats, no standardization, no scale.",
-      "solution": "Opportunity Engine ingests, processes and analyzes dozens of public datasets in a unified platform. Structured data lake, DuckDB queries, real-time economic scoring.",
-      "architecture": "Automated ingestion → DuckDB → BigQuery → Feature Store → Scoring Models → API → Dashboard",
-      "datasets": "IBGE | CAGED | RAIS | CNPJ | RFB | SIDRA | IPEA",
-      "outputs": "Economic Scoring | Market Intelligence | Heat Maps | Regional Indicators | Time Series",
-      "formats": "Parquet | Arrow | Delta Lake | OpenAPI | Streaming",
-      "use_cases": "Regional market analysis | Credit scoring | Competitive intelligence | Geographic expansion",
-      "results": "Dozens of unified datasets | Sub-second queries | Ready-to-consume APIs"
-    },
-    "intelligent_squads": {
-      "name": "Intelligent Squads",
-      "tagline": "Multidisciplinary teams with AI",
-      "description": "Experts, AI, automation and engineering working in synergy.",
-      "problem": "Companies need high-level technology but lack internal teams. Hiring, training and retaining engineering talent is expensive, slow and risky.",
-      "solution": "Intelligent Squads delivers complete, elastic teams — engineering, data, AI, design, QA — ready to design and execute complex projects.",
-      "model": "Business → Discovery → UX → Software → Data → AI → Cloud → QA → Deploy → Operations",
-      "specialties": "Software Engineering | Artificial Intelligence | Data Engineering | Automation | Cloud | UX/UI | QA | DevOps",
-      "elasticity": "Squads grow, shrink and specialize on demand. An AI squad today, a data squad tomorrow, a full product squad next month. No bureaucracy. No friction.",
-      "use_cases": "Greenfield projects | Product acceleration | AI squads | Data engineering as a service",
-      "results": "On-demand team | Predictable cost | Immediate scalability | Multidisciplinary expertise"
+    "nyra_connect": {
+      "name": "Nyra Connect",
+      "tagline": "AI-powered service, relationship and commercial conversion platform",
+      "description": "Service, relationship and commercial conversion platform, designed especially for companies that receive leads through WhatsApp. Nyra Connect automates first contact, qualifies leads, organizes the sales funnel and maintains complete relationship history — turning conversations into business opportunities.",
+      "problem": "Companies that receive leads through WhatsApp struggle to organize, qualify and convert at scale. Conversations get lost, leads go untracked and the sales funnel remains invisible.",
+      "solution": "Nyra Connect organizes every incoming lead, automates initial service, presents services and commercial information, manages scheduling, maintains complete relationship history and provides service and conversion metrics. It's not a simple chatbot — it's a relationship and conversion platform powered by artificial intelligence.",
+      "features": "Automated service | Q&A responses | Service presentation | Scheduling | Confirmations and reminders | Relationship history | Lead organization | Sales funnel | Campaigns | Service and conversion metrics",
+      "use_cases": "Inbound WhatsApp service | Automated lead qualification | Sales funnel management | Relationship campaigns | Lead recovery",
+      "results": "Leads organized from first contact | 24/7 service without losing humanity | Complete relationship history | Clear conversion metrics"
     }
   },
   "solutions": {
@@ -132,8 +122,8 @@
     "ai_desc": "Machine Learning, Deep Learning, NLP, Computer Vision, GenAI, AI Agents and Multi-Agent Systems. Research and development in applied artificial intelligence.",
     "ai_problem": "Generic AI models don't solve specific business problems. Without proprietary data, proper architecture and ML engineering, AI doesn't deliver real value.",
     "ai_approach": "We design complete AI pipelines: ingestion, feature engineering, training, validation, deployment and monitoring. Production models that learn and evolve with your data.",
-      "ai_tech": "Python | PyTorch | TensorFlow | Hugging Face | LangChain | OpenAI | Anthropic | NVIDIA Nemotron | Qdrant | Milvus | MLflow",
-    "ai_results": "95%+ accuracy on proprietary models | Operational cost reduction | Complex decision automation",
+    "ai_tech": "Python | PyTorch | TensorFlow | Hugging Face | LangChain | OpenAI | Anthropic | Qdrant | Milvus | MLflow",
+    "ai_results": "Production models | Operational cost reduction | Complex decision automation",
     "software": "Software Engineering",
     "software_desc": "Clean architecture, microservices, REST APIs, scalable systems and complete SaaS platforms. Enterprise standards and engineering best practices.",
     "software_problem": "Legacy systems accumulate technical debt. Fragile architectures block growth. Every new feature is slower and more expensive than the last.",
@@ -143,15 +133,15 @@
     "data": "Data Engineering",
     "data_desc": "Data engineering, ETL/ELT, Data Warehouse, Data Lake, data pipelines and observability. Turning data into decisions.",
     "data_problem": "Raw data generates no value. Without robust pipelines, quality and governance, companies make decisions based on incomplete or incorrect information.",
-    "data_approach": "We build enterprise data pipelines with quality from the source. Ingestion, transformation, storage and delivery — all auditable, scalable and observable.",
+    "data_approach": "We build enterprise data pipelines with quality from the source. Ingestion, transformation, storage and delivery — all auditable and scalable.",
     "data_tech": "Python | DuckDB | BigQuery | dbt | Airflow | Spark | Kafka | Parquet | Delta Lake | Data Lakehouse",
-    "data_results": "Trusted data in production | Self-healing pipelines | Real-time analytics | Controlled cost",
+    "data_results": "Trusted data in production | Pipelines with observability | Real-time analytics | Controlled cost",
     "automation": "Business Automation",
     "automation_desc": "Business process automation, intelligent RPA, workflow orchestration and system integration. Operational efficiency at scale.",
     "automation_problem": "Manual processes consume time, generate errors and limit growth. Teams drowning in repetitive tasks can't focus on what really matters.",
     "automation_approach": "We design intelligent workflows that integrate systems, automate decisions and free teams for high-value activities. AI-powered RPA, orchestration and monitoring.",
     "automation_tech": "Python | n8n | Temporal | Docker | REST APIs | Webhooks | LLMs | RPA",
-    "automation_results": "80% less manual tasks | Zero process errors | Immediate scalability | Measurable ROI in weeks"
+    "automation_results": "Significant reduction in manual tasks | Auditable processes | Operational scale | Efficiency-driven ROI"
   },
   "about": {
     "title": "About",
@@ -175,8 +165,8 @@
     "story_badge": "Our Story",
     "story_headline": "Engineering born from a real problem.",
     "story_problem": "High-potential Brazilian companies face a gap: cutting-edge technology exists but is inaccessible — imported, expensive, disconnected from local reality. ERP doesn't solve it. Spreadsheets don't scale. Consulting doesn't transform.",
-    "story_vision": "FMD was born to fill this gap. We don't resell technology — we build it. Proprietary platforms for artificial intelligence, data and automation, engineered with the same rigor as the world's largest tech companies.",
-    "story_evolution": "Since 2020, we've evolved from an engineering studio into a product ecosystem. Nyra, InMora, Opportunity Engine, Intelligent Squads — each solving a real problem with enterprise architecture, real data and embedded intelligence.",
+    "story_vision": "FMD was born to fill this gap. We don't resell technology — we build it. Proprietary platforms for artificial intelligence, data and automation, engineered with rigor.",
+    "story_evolution": "Since 2020, we've evolved from an engineering studio into a technology company with our own products. Nyra and Nyra Connect — two platforms solving real problems with enterprise architecture, data and embedded intelligence.",
     "engineering_badge": "Engineering",
     "engineering_headline": "Software is not code. It's architecture.",
     "engineering_text": "Every system we design is treated as an engineering product — with planning, quality and continuous evolution. Our engineering principles ensure every platform is scalable, maintainable and future-ready.",
@@ -208,9 +198,9 @@
     "diffs_headline": "What makes us different is what makes us better.",
     "diffs_items": [
       { "title": "Modular Architecture", "desc": "Every platform is designed in independent layers that can evolve separately. We swap technologies without affecting the business." },
-      { "title": "Artificial Intelligence", "desc": "Proprietary models trained on real data. NLP, computer vision, autonomous agents and multi-agent systems in production." },
+      { "title": "Artificial Intelligence", "desc": "Proprietary models trained on real data. NLP, autonomous agents and multi-agent systems in production." },
       { "title": "Data Engineering", "desc": "Enterprise pipelines that ingest, transform and deliver data with quality, governance and observability." },
-      { "title": "Cloud Native", "desc": "Infrastructure as code, horizontal scalability, controlled cost. AWS, Azure and GCP with disaster recovery and high availability." },
+      { "title": "Evolving Cloud Architecture", "desc": "Cloud architecture prepared to scale with different services, models and infrastructure providers." },
       { "title": "Intelligent Automation", "desc": "Workflows that integrate systems, automate decisions and free teams. AI-powered RPA, orchestration and monitoring." },
       { "title": "Elastic Squads", "desc": "Multidisciplinary teams that grow, shrink and specialize as needed. Engineering on demand without bureaucracy." },
       { "title": "Proprietary Products", "desc": "Own platforms solving real problems. We are not a consulting firm that outsources — we are a technology company that builds." }

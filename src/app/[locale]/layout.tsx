@@ -43,7 +43,7 @@ export default async function LocaleLayout({
       lang={locale}
       className={`${geist.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="bg-[#050816] text-[#f5f7fa] antialiased">
+      <body className="bg-bg text-text antialiased">
         <NextIntlProvider locale={locale as Locale} messages={messages}>
           {children}
         </NextIntlProvider>

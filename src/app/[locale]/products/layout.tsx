@@ -7,8 +7,8 @@ const titles: Record<string, string> = {
 };
 
 const descriptions: Record<string, string> = {
-  pt: "Conheça o ecossistema de produtos inteligentes da FMD: Nyra, InMora, Opportunity Engine e Intelligent Squads.",
-  en: "Discover FMD's ecosystem of intelligent products: Nyra, InMora, Opportunity Engine and Intelligent Squads.",
+  pt: "Conheça as plataformas de inteligência comercial da FMD: Nyra e Nyra Connect. Revenue Operations, Sales Intelligence e automação de atendimento com IA.",
+  en: "Discover FMD's commercial intelligence platforms: Nyra and Nyra Connect. Revenue Operations, Sales Intelligence and AI-powered service automation.",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

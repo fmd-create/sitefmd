@@ -42,7 +42,7 @@ export default function AboutPage() {
             {/* Stats */}
             <div className="mt-16 md:mt-20 grid grid-cols-3 gap-px bg-[#2a2f3b]/30 rounded-xl overflow-hidden border border-[#2a2f3b]/30">
               {[
-                { value: "4", label: ma?.stat_platforms as string },
+                { value: "2", label: ma?.stat_platforms as string },
                 { value: "+20", label: ma?.stat_techs as string },
                 { value: "100%", label: ma?.stat_engineering as string },
               ].map((stat, i) => (

@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 
-const title = "FMD Soluções Inteligentes — Engenharia de Software, IA e Automação";
+const title = "FMD Soluções Inteligentes — IA para Revenue Operations e Inteligência Comercial";
 const description =
-  "Engenharia de software de alto nível. Projetamos sistemas inteligentes de automação comercial, inteligência econômica e engenharia de dados — do Brasil para o mundo.";
+  "A FMD desenvolve plataformas de inteligência comercial com IA: Revenue Operations, Sales Intelligence, AI Agents e automação de workflows. Tecnologia brasileira para transformar sua operação comercial.";
 
 export const metadata: Metadata = {
   title: {
@@ -14,15 +14,19 @@ export const metadata: Metadata = {
   keywords: [
     "engenharia de software",
     "inteligência artificial",
+    "revenue operations",
+    "sales intelligence",
+    "inteligência comercial",
+    "IA",
+    "AI agents",
+    "multi-agent systems",
     "automação comercial",
     "dados",
-    "IA",
     "machine learning",
     "FMD",
     "soluções inteligentes",
     "software engineering",
-    "AI",
-    "automation",
+    "workflow automation",
   ],
   authors: [{ name: "FMD Soluções Inteligentes" }],
   creator: "FMD Soluções Inteligentes",

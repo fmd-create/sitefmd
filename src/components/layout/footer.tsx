@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useMessages, useLocale } from "@/i18n/next-intl-provider";
 import { ArrowUpRight, Linkedin, Github, Mail } from "lucide-react";
@@ -12,35 +11,31 @@ export function Footer() {
   const mn = messages?.nav as Record<string, unknown> | undefined;
 
   return (
-    <footer className="border-t border-[#2a2f3b]">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <footer className="border-t border-border">
+      <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/fmd-logo.png"
-                alt="FMD Soluções Inteligentes"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
-              <span className="text-sm font-medium text-[#f5f7fa] tracking-tight">
-                FMD
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded-md bg-gradient-to-br from-primary to-teal-light flex items-center justify-center">
+                <span className="text-[10px] font-bold text-white">F</span>
+              </div>
+              <span className="text-sm font-semibold text-white tracking-tight">
+                FMD Soluções Inteligentes
               </span>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#8b92a5]">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-text-muted">
               {mf?.description as string}
             </p>
-            <p className="mt-4 text-xs font-medium tracking-[0.15em] text-[#0a5cff] uppercase">
+            <p className="mt-4 text-xs font-medium tracking-wider text-primary">
               {mf?.signature as string}
             </p>
           </div>
 
           <div>
-            <h4 className="mb-5 text-xs font-semibold tracking-[0.1em] text-[#f5f7fa] uppercase">
+            <h4 className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">
               {mf?.nav_title as string}
             </h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
               {[
                 { key: "products", href: "/products" },
                 { key: "solutions", href: "/solutions" },
@@ -50,82 +45,82 @@ export function Footer() {
                 <Link
                   key={item.key}
                   href={`/${locale}${item.href}`}
-                  className="group inline-flex items-center gap-1.5 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+                  className="group inline-flex items-center gap-1.5 text-sm text-text-muted transition-colors hover:text-white w-fit"
                 >
                   {mn?.[item.key] as string || item.key}
-                  <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                  <ArrowUpRight size={11} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
                 </Link>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="mb-5 text-xs font-semibold tracking-[0.1em] text-[#f5f7fa] uppercase">
+            <h4 className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">
               {mf?.social_title as string}
             </h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
               <a
                 href="https://www.linkedin.com/in/fmdottori/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+                className="group inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-white w-fit"
               >
                 <Linkedin size={14} />
                 {mf?.linkedin as string}
-                <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                <ArrowUpRight size={11} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
               </a>
               <a
                 href="https://github.com/fmd-create"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+                className="group inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-white w-fit"
               >
                 <Github size={14} />
                 {mf?.github as string}
-                <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                <ArrowUpRight size={11} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
               </a>
               <a
                 href="mailto:contato@fmdsoluccoesinteligentes.com.br"
-                className="group inline-flex items-center gap-2 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+                className="group inline-flex items-center gap-2 text-sm text-text-muted transition-colors hover:text-white w-fit"
               >
                 <Mail size={14} />
                 {mf?.email as string}
               </a>
             </div>
 
-            <h4 className="mb-5 mt-8 text-xs font-semibold tracking-[0.1em] text-[#f5f7fa] uppercase">
+            <h4 className="mb-4 mt-8 text-xs font-semibold tracking-wider text-white uppercase">
               {mf?.legal_title as string}
             </h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2.5">
               <Link
                 href={`/${locale}/termos-de-uso`}
-                className="group inline-flex items-center gap-1.5 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+                className="group inline-flex items-center gap-1.5 text-sm text-text-muted transition-colors hover:text-white w-fit"
               >
                 {mf?.terms as string}
-                <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                <ArrowUpRight size={11} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
               </Link>
               <Link
                 href={`/${locale}/politica-de-privacidade`}
-                className="group inline-flex items-center gap-1.5 text-sm text-[#8b92a5] transition-colors hover:text-[#f5f7fa] w-fit"
+                className="group inline-flex items-center gap-1.5 text-sm text-text-muted transition-colors hover:text-white w-fit"
               >
                 {mf?.privacy as string}
-                <ArrowUpRight size={12} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                <ArrowUpRight size={11} className="opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
               </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-[#2a2f3b] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex flex-col items-center sm:items-start gap-1">
-            <p className="text-xs text-[#5a6275]">
+        <div className="mt-14 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col items-center sm:items-start gap-0.5">
+            <p className="text-xs text-text-subtle">
               &copy; {new Date().getFullYear()} {mf?.copyright as string}.{" "}
               {mf?.rights as string}
             </p>
-            <p className="text-xs text-[#4a5265]">
+            <p className="text-xs text-text-subtle/60">
               F. M. Dottori LTDA - CNPJ: 58.617.025/0001-19
             </p>
           </div>
-          <p className="text-xs text-[#5a6275]">
+          <p className="text-xs text-text-subtle">
             {mf?.tagline as string}
           </p>
         </div>
