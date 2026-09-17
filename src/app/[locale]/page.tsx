@@ -389,7 +389,7 @@ export default function HomePage() {
                   icon: Server,
                   title: "Arquitetura Modular",
                   desc: "Sistemas projetados em camadas independentes que evoluem separadamente. Cada módulo escala sob demanda sem reescritas.",
-                  tags: ["Microsserviços", "Clean Architecture", "Evolução contínua"]
+                  tags: ["Clean Architecture", "Evolução contínua"]
                 },
                 {
                   icon: Lock,
@@ -401,7 +401,7 @@ export default function HomePage() {
                   icon: Zap,
                   title: "Escalabilidade",
                   desc: "Arquitetura preparada para crescimento. Cada módulo escala independentemente — sem interrupções, sem limites artificiais.",
-                  tags: ["Microsserviços", "Elasticidade", "Alta performance"]
+                  tags: ["Elasticidade", "Performance"]
                 }
               ].map((pillar) => (
                 <RevealOnScroll key={pillar.title}>

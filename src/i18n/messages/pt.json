@@ -55,7 +55,7 @@
     "methodology": {
       "badge": "Arquitetura",
       "headline": "Modular. Segura. Escalável.",
-      "subtitle": "Construída para evolução contínua com os mais altos padrões de engenharia.",
+      "subtitle": "Construída para evolução contínua com boas práticas de engenharia.",
       "steps": [
         { "label": "Arquitetura Modular", "desc": "Sistemas em camadas independentes" },
         { "label": "Segurança por Design", "desc": "Proteção incorporada ao desenvolvimento" },
@@ -125,7 +125,7 @@
     "ai_tech": "Python | PyTorch | TensorFlow | Hugging Face | LangChain | OpenAI | Anthropic | Qdrant | Milvus | MLflow",
     "ai_results": "Modelos em produção | Redução de custos operacionais | Automação de decisões complexas",
     "software": "Engenharia de Software",
-    "software_desc": "Arquitetura limpa, microsserviços, APIs REST, sistemas escaláveis e plataformas SaaS completas. Padrões enterprise e boas práticas de engenharia.",
+    "software_desc": "Arquitetura limpa, microsserviços, APIs REST, sistemas escaláveis e plataformas de inteligência comercial. Padrões enterprise e boas práticas de engenharia.",
     "software_problem": "Sistemas legados acumulam dívida técnica. Arquiteturas frágeis travam o crescimento. Cada nova feature é mais lenta e mais cara que a anterior.",
     "software_approach": "Projetamos arquiteturas do zero — ou reestruturamos sistemas existentes — com Clean Architecture, DDD, Event-Driven Design e microsserviços. Cada decisão técnica é uma decisão de negócio.",
     "software_tech": "TypeScript | Python | Go | Rust | Node.js | Next.js | React | PostgreSQL | Redis | Kafka | Docker | Kubernetes",

@@ -55,7 +55,7 @@
     "methodology": {
       "badge": "Architecture",
       "headline": "Modular. Secure. Scalable.",
-      "subtitle": "Built for continuous evolution with the highest engineering standards.",
+      "subtitle": "Built for continuous evolution with good engineering practices.",
       "steps": [
         { "label": "Modular Architecture", "desc": "Systems in independent layers" },
         { "label": "Security by Design", "desc": "Protection built into development" },
@@ -125,7 +125,7 @@
     "ai_tech": "Python | PyTorch | TensorFlow | Hugging Face | LangChain | OpenAI | Anthropic | Qdrant | Milvus | MLflow",
     "ai_results": "Production models | Operational cost reduction | Complex decision automation",
     "software": "Software Engineering",
-    "software_desc": "Clean architecture, microservices, REST APIs, scalable systems and complete SaaS platforms. Enterprise standards and engineering best practices.",
+    "software_desc": "Clean architecture, microservices, REST APIs, scalable systems and commercial intelligence platforms. Enterprise standards and engineering best practices.",
     "software_problem": "Legacy systems accumulate technical debt. Fragile architectures block growth. Every new feature is slower and more expensive than the last.",
     "software_approach": "We design architectures from scratch — or restructure existing systems — with Clean Architecture, DDD, Event-Driven Design and microservices. Every technical decision is a business decision.",
     "software_tech": "TypeScript | Python | Go | Rust | Node.js | Next.js | React | PostgreSQL | Redis | Kafka | Docker | Kubernetes",

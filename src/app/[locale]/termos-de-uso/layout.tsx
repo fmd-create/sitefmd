@@ -7,8 +7,8 @@ const titles: Record<string, string> = {
 };
 
 const descriptions: Record<string, string> = {
-  pt: "Termos de Uso da plataforma FMD Soluções Inteligentes. Condições gerais para utilização dos nossos serviços e produtos SaaS.",
-  en: "Terms of Use for the FMD Soluções Inteligentes platform. General conditions for using our SaaS services and products.",
+  pt: "Termos de Uso da FMD Soluções Inteligentes. Condições gerais para utilização do site e produtos Nyra/Nyra Connect.",
+  en: "Terms of Use for FMD Soluções Inteligentes. General conditions for using the website and Nyra/Nyra Connect products.",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

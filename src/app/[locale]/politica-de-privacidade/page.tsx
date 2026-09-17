@@ -42,8 +42,8 @@ export default function PrivacidadePage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "A FMD Soluções Inteligentes (\"FMD\", \"nós\", \"nosso\") está comprometida com a proteção da sua privacidade. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações pessoais dos Usuários da nossa Plataforma SaaS, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)."
-                    : "FMD Soluções Inteligentes (\"FMD\", \"we\", \"our\") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, store and protect the personal information of Users of our SaaS Platform, in compliance with the Brazilian General Data Protection Law (LGPD - Law No. 13,709/2018)."}
+                    ? "A FMD Soluções Inteligentes (\"FMD\", \"nós\", \"nosso\") está comprometida com a proteção da sua privacidade. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações pessoais dos Usuários de nossos produtos de inteligência comercial, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)."
+                    : "FMD Soluções Inteligentes (\"FMD\", \"we\", \"our\") is committed to protecting your privacy. This Privacy Policy describes how we collect, use, store and protect the personal information of Users of our commercial intelligence products, in compliance with the Brazilian General Data Protection Law (LGPD - Law No. 13,709/2018)."}
                 </p>
               </section>
 
@@ -61,7 +61,6 @@ export default function PrivacidadePage() {
                       <li><strong>Dados de contato:</strong> E-mail, telefone, endereço profissional.</li>
                       <li><strong>Dados de acesso:</strong> Endereço IP, agente do usuário, logs de acesso, páginas visitadas.</li>
                       <li><strong>Dados de uso:</strong> Funcionalidades utilizadas, tempo de sessão, interações com a Plataforma.</li>
-                      <li><strong>Dados de pagamento:</strong> Informações de faturamento (processadas por provedor de pagamento terceirizado).</li>
                     </>
                   ) : (
                     <>
@@ -117,7 +116,7 @@ export default function PrivacidadePage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "A FMD não vende dados pessoais dos Usuários. Podemos compartilhar dados com: (a) provedores de infraestrutura em nuvem; (b) processadores de pagamento; (c) autoridades competentes quando exigido por lei. Todos os terceiros com quem compartilhamos dados são obrigados a manter padrões de segurança compatíveis com esta Política."
+                    ? "A FMD não vende dados pessoais dos Usuários. Podemos compartilhar dados com: (a) provedores de infraestrutura em nuvem; (c) autoridades competentes quando exigido por lei. Todos os terceiros com quem compartilhamos dados são obrigados a manter padrões de segurança compatíveis com esta Política."
                     : "FMD does not sell Users' personal data. We may share data with: (a) cloud infrastructure providers; (b) payment processors; (c) competent authorities when required by law. All third parties with whom we share data are required to maintain security standards compatible with this Policy."}
                 </p>
               </section>

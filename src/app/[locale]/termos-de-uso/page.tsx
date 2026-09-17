@@ -42,8 +42,8 @@ export default function TermosPage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "Ao acessar ou utilizar a plataforma FMD Soluções Inteligentes (\"Plataforma\"), você confirma que leu, entendeu e concorda em estar vinculado a estes Termos de Uso. Se você não concordar com qualquer parte destes termos, não deverá utilizar a Plataforma."
-                    : "By accessing or using the FMD Soluções Inteligentes platform (\"Platform\"), you confirm that you have read, understood and agree to be bound by these Terms of Use. If you do not agree with any part of these terms, you should not use the Platform."}
+                    ? "A FMD Soluções Inteligentes apresenta produtos e soluções de inteligência comercial e automação. Este site destina-se a informações sobre nossos produtos Nyra e Nyra Connect. Para mais detalhes, acesse /pt/products ou entre em contato pelo e-mail: contato@fmdsoluccoesinteligentes.com.br."
+                    : "FMD Soluções Inteligentes presents commercial intelligence and automation products. This site is intended for information about our Nyra and Nyra Connect products. For more details, visit /pt/products or contact us at: contato@fmdsoluccoesinteligentes.com.br."}
                 </p>
               </section>
 
@@ -54,19 +54,17 @@ export default function TermosPage() {
                 <ul className="list-disc pl-5 space-y-2">
                   {isPt ? (
                     <>
-                      <li><strong>Plataforma:</strong> Conjunto de software, aplicações, APIs e serviços SaaS fornecidos pela FMD Soluções Inteligentes sob a marca FMD.</li>
-                      <li><strong>Usuário:</strong> Pessoa física ou jurídica que utiliza a Plataforma mediante cadastro e assinatura.</li>
-                      <li><strong>Assinante:</strong> Cliente que contratou um plano de assinatura da Plataforma.</li>
-                      <li><strong>Dados:</strong> Informações inseridas, processadas ou armazenadas pelo Usuário na Plataforma.</li>
-                      <li><strong>SaaS:</strong> Software como Serviço, modelo de distribuição de software sob assinatura.</li>
+                      <li><strong>Plataforma:</strong> Apresentação institucional de produtos e soluções FMD. Acesso gratuito a informações sobre Nyra e Nyra Connect.</li>
+                      <li><strong>Usuário:</strong> Pessoa física ou jurídica interessada em produtos Nyra/Nyra Connect.</li>
+                      <li><strong>Assinante:</strong> Não aplica - produtos em estágio MVP, acesso mediante cadastro.</li>
+                      <li><strong>Dados:</strong> Informações inseridas, processadas ou armazenadas pelo Usuário em cadastro próprio.</li>
                     </>
                   ) : (
                     <>
-                      <li><strong>Platform:</strong> The set of software, applications, APIs and SaaS services provided by FMD Soluções Inteligentes under the FMD brand.</li>
-                      <li><strong>User:</strong> Individual or legal entity that uses the Platform through registration and subscription.</li>
-                      <li><strong>Subscriber:</strong> Customer who has contracted a Platform subscription plan.</li>
-                      <li><strong>Data:</strong> Information inserted, processed or stored by the User on the Platform.</li>
-                      <li><strong>SaaS:</strong> Software as a Service, a subscription-based software distribution model.</li>
+<li><strong>Platform:</strong> Institutional presentation of FMD products and solutions. Free access to information about Nyra and Nyra Connect.</li>
+                      <li><strong>User:</strong> Individual or legal entity interested in Nyra/Nyra Connect products.</li>
+                      <li><strong>Subscriber:</strong> Not applicable - MVP stage products, access upon registration.</li>
+                      <li><strong>Data:</strong> Information inserted, processed or stored by the User in their own registration.</li>
                     </>
                   )}
                 </ul>
@@ -78,8 +76,8 @@ export default function TermosPage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "Para utilizar a Plataforma, o Usuário deverá criar uma conta fornecendo informações precisas e completas. O Usuário é responsável por manter a confidencialidade de suas credenciais de acesso e por todas as atividades que ocorrerem em sua conta. A FMD reserva-se o direito de suspender ou encerrar contas que violem estes Termos."
-                    : "To use the Platform, the User must create an account by providing accurate and complete information. The User is responsible for maintaining the confidentiality of their access credentials and for all activities that occur under their account. FMD reserves the right to suspend or terminate accounts that violate these Terms."}
+                    ? "A FMD Soluções Inteligentes desenvolve produtos próprios de inteligência comercial e automação. A NYRA e a NYRA Connect são plataformas em estágio MVP, projetadas para apoiar a descoberta, qualificação e gestão de oportunidades comerciais, bem como atendimento e relacionamento via WhatsApp. O acesso a estas soluções ocorre mediante cadastro prévio e autorização, conforme interesse do usuário."
+                    : "FMD Soluções Inteligentes develops own commercial intelligence and automation products. Nyra and Nyra Connect are MVP-stage platforms designed to support commercial opportunity discovery, qualification and management, as well as WhatsApp-based service and relationship. Access to these solutions occurs upon prior registration and user authorization, as per interest."}
                 </p>
               </section>
 
@@ -89,8 +87,8 @@ export default function TermosPage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "O acesso a funcionalidades premium da Plataforma requer a contratação de uma assinatura. Os planos, preços e condições de pagamento estão disponíveis no momento da contratação. A FMD poderá alterar seus planos e preços mediante aviso prévio. O cancelamento da assinatura não garante reembolso de valores já pagos, exceto quando previsto em lei."
-                    : "Access to premium Platform features requires a subscription. Plans, prices and payment conditions are available at the time of purchase. FMD may change its plans and prices upon prior notice. Subscription cancellation does not guarantee refund of amounts already paid, except as provided by law."}
+                    ? "A FMD Soluções Inteligentes disponibiliza informações sobre seus produtos Nyra e Nyra Connect neste site institucional. Não há cobrança de assinatura ou plano de assinatura para acesso ao conteúdo apresentado. Para aquisição das plataformas ou agendamento de demonstração, entre em contato pelo e-mail: contato@fmdsoluccoesinteligentes.com.br."
+                    : "FMD Soluções Inteligentes makes information about its Nyra and Nyra Connect products available on this institutional site. There is no subscription fee or subscription plan for accessing the presented content. To purchase the platforms or schedule a demo, contact us at: contato@fmdsoluccoesinteligentes.com.br."}
                 </p>
               </section>
 
@@ -122,8 +120,8 @@ export default function TermosPage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "A coleta e o tratamento de dados pessoais são regidos pela nossa Política de Privacidade, que integra estes Termos. A FMD emprega medidas técnicas e organizacionais para proteger os dados dos Usuários, incluindo criptografia de ponta a ponta, controle de acesso e auditoria contínua."
-                    : "The collection and processing of personal data are governed by our Privacy Policy, which is part of these Terms. FMD employs technical and organizational measures to protect User data, including end-to-end encryption, access control and continuous auditing."}
+                    ? "A coleta e o tratamento de dados pessoais são regidos pela nossa Política de Privacidade, que integra estes Termos. A FMD emprega medidas técnicas e organizacionais para proteger os dados dos Usuários, incluindo controle de acesso e auditoria contínua."
+                    : "The collection and processing of personal data are governed by our Privacy Policy, which is part of these Terms. FMD employs technical and organizational measures to protect User data, including access control and continuous auditing."}
                 </p>
               </section>
 
@@ -133,8 +131,8 @@ export default function TermosPage() {
                 </h2>
                 <p>
                   {isPt
-                    ? "A FMD se esforça para manter a Plataforma disponível 24/7, mas não garante disponibilidade ininterrupta devido a manutenções programadas ou Eventos de Força Maior. O suporte técnico é fornecido conforme o plano contratado. O SLA (Acordo de Nível de Serviço) é definido no contrato de assinatura."
-                    : "FMD strives to keep the Platform available 24/7, but does not guarantee uninterrupted availability due to scheduled maintenance or Force Majeure events. Technical support is provided according to the contracted plan. The SLA (Service Level Agreement) is defined in the subscription contract."}
+                    ? "A FMD Soluções Inteligentes desenvolve produtos de inteligência comercial em estágio inicial (MVP). A arquitetura dos produtos está em evolução contínua com migração gradual para serviços de nuvem. O suporte ao usuário está disponível pelos canais de contato oficiais."
+                    : "FMD Soluções Inteligentes develops commercial intelligence products in initial MVP stage. The product architecture is under continuous evolution with gradual migration to cloud services. User support is available through official contact channels."}
                 </p>
               </section>
 
